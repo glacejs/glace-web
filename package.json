@@ -1,6 +1,6 @@
 {
   "name": "glace-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -15,12 +15,27 @@
   "bugs": {
     "url": "https://github.com/glacejs/glace-web/issues"
   },
-  "homepage": "https://github.com/glacejs/glace-web#readme",
+  "homepage": "https://glacejs.github.com/glace-web",
   "engines": {
     "node": ">= 8.9",
     "npm": ">= 5.5"
   },
+  "devDependencies": {
+    "cross-spawn": "^5.1.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "ink-docstrap": "^1.3.0",
+    "jsdoc-strip-async-await": "^0.1.0"
+  },
   "files": [
     "lib"
-  ]
+  ],
+  "dependencies": {
+    "chai": "^4.1.2",
+    "glace-utils": "^1.0.0",
+    "lodash": "^4.17.4",
+    "selenium-standalone": "^6.11.0",
+    "weak": "^1.0.1",
+    "webdriverio": "^4.9.11"
+  }
 }
