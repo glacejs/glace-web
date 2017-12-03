@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>GlaseJS Source: steps/index.js</title>
+	<title>GlaseJS Source: pluginHelp.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -93,32 +93,73 @@
 		<div id="main">
 			
 
-		<h1 class="page-title">Source: steps/index.js</h1>
+		<h1 class="page-title">Source: pluginHelp.js</h1>
     
 <section>
     <article>
         <pre
             class="sunlight-highlight-javascript linenums">"use strict";
 /**
- * Steps to manage web application.
- * 
- * @mixin WebSteps
- * @mixes BrowserSteps
- * @mixes PageSteps
- * @prop {object} webdriver - Webdriver instance.
- * @prop {string} webUrl - Web application URL.
+ * `Web` plugin help.
+ *
+ * @function
  */
-
-var _ = require("lodash");
-
-require("../fixtures");
-
-var WebSteps = {};
-_.extend(WebSteps,
-         require("./browser"),
-         require("./page"));
-
-module.exports = WebSteps;
+module.exports = (args, d) => {
+    return args
+        .options({
+            /* selenium */
+            "dont-install-drivers": {
+                describe: d("Flag to not install selenium drivers on tests run."),
+                type: "boolean",
+                group: "Selenium:",
+            },
+            "web": {
+                describe: d("Flag to launch tests in browser. Browser will be",
+                            "launched on session start and closed on session finish."),
+                type: "boolean",
+                group: "Selenium:",
+            },
+            "app": {
+                describe: d("Application URL which will be used for web tests."),
+                type: "string",
+                group: "Selenium:",
+            },
+            "selenium-addr": {
+                describe: d("Connect to launched selenium server with this address."),
+                type: "string",
+                group: "Selenium:",
+            },
+            "platform": {
+                describe: d("Specify platform type where tests will be executed.",
+                            "Default is 'pc'."),
+                type: "string",
+                choices: [ "pc", "android", "ios" ],
+                group: "Selenium:",
+            },
+            "browser": {
+                describe: d("Name of browser where web tests will be",
+                            "executed. Default value is platform specific."),
+                type: "string",
+                group: "Selenium:",
+            },
+            /* appium */
+            "device": {
+                describe: d("Mobile device name."),
+                type: "string",
+                group: "Appium:",
+            },
+            "os-version": {
+                describe: d("Mobile operating system version."),
+                type: "string",
+                group: "Appium:",
+            },
+            "ios-engine": {
+                describe: d("iOS automation engine name."),
+                type: "string",
+                group: "Appium:",
+            },
+        });
+};
 </pre>
     </article>
 </section>
