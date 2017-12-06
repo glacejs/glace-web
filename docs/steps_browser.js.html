@@ -105,12 +105,15 @@
  * @mixin BrowserSteps
  */
 
+var _ = require("lodash");
 var selenium = require("selenium-standalone");
 var wdio = require("webdriverio");
 var U = require("glace-utils");
 var LOG = U.logger;
 
 var CONF = require("../config");
+
+var defChromeOpts;
 
 var BrowserSteps = {
     /**
@@ -130,7 +133,7 @@ var BrowserSteps = {
      * @method
      * @instance
      * @return {Promise&lt;void>}
-     * @throws {Error} - If there was error during drivers installation.
+     * @throws {Error} If there was error during drivers installation.
      */
     installSeleniumDrivers: async function () {
 
@@ -153,8 +156,8 @@ var BrowserSteps = {
      * @async
      * @method
      * @instance
-     * @return {Promise&lt;void>}
-     * @throws {Error} - If there was error on selenium start.
+     * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
+     * @throws {Error} If there was error on selenium start.
      */
     startSeleniumServer: async function () {
 
@@ -182,8 +185,8 @@ var BrowserSteps = {
      * @async
      * @method
      * @instance
-     * @return {Promise&lt;void>}
-     * @throws {Error} - If there was error on selenium stop.
+     * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
+     * @throws {Error} If there was error on selenium stop.
      */
     stopSeleniumServer: async function () {
 
@@ -216,8 +219,9 @@ var BrowserSteps = {
      * @arg {object} [opts] - Step options.
      * @arg {boolean} [opts.check=true] - Flag to check that browser was
      *  launched.
-     * @return {Promise&lt;void>}
-     * @throws {AssertionError} - If browser wasn't launched.
+     * @arg {string[]} [opts.chromeOpts=[]] - List of chrome options.
+     * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
+     * @throws {AssertionError} If browser wasn't launched.
      */
     launchBrowser: async function (opts) {
 
@@ -229,23 +233,34 @@ var BrowserSteps = {
         opts = U.defVal(opts, {});
         var check = U.defVal(opts.check, true);
 
-        var proxyOptions = [ "ignore-certificate-errors",
-                             `proxy-server=${U.hostname}:${CONF.proxy.globalPort}`,
-                             `proxy-bypass-list=localhost,127.0.0.1,${U.hostname}` ];
-        var chromeArgs = this.webdriver.desiredCapabilities.chromeOptions.args;
+        if (CONF.web.platform === "pc" &amp;&amp;
+                this.webdriver.desiredCapabilities.browserName === "chrome") {
 
-        for (var option of proxyOptions) {
-            if (this._isGlobalProxyStarted) {
-                if (!chromeArgs.includes(option)) {
-                    chromeArgs.push(option);
-                };
-            } else {
-                if (chromeArgs.includes(option)) {
-                    var idx = chromeArgs.indexOf(option);
-                    chromeArgs.splice(idx, 1);
+            defChromeOpts = U.defVal(
+                defChromeOpts,
+                this.webdriver.desiredCapabilities.chromeOptions.args,
+                []);
+
+            var chromeOpts = _.clone(U.defVal(opts.chromeOpts, []));
+
+            if (this.globalProxy &amp;&amp; this.globalProxy.isRunning) {
+                var proxyOptions = [
+                    "ignore-certificate-errors",
+                    `proxy-server=${U.hostname}:${CONF.proxy.globalPort}`,
+                    `proxy-bypass-list=localhost,127.0.0.1,${U.hostname}`,
+                ];
+                for (var opt of proxyOptions) {
+                    if (!isOptPresent(opt, chromeOpts)) chromeOpts.push(opt);
                 };
             };
+
+            for (var opt of defChromeOpts) {
+                if (!isOptPresent(opt, chromeOpts)) chromeOpts.push(opt);
+            };
+
+            this.webdriver.desiredCapabilities.chromeOptions.args = chromeOpts;
         };
+
         await this.webdriver.init();
 
         if (check) {
@@ -265,8 +280,8 @@ var BrowserSteps = {
      * @instance
      * @arg {object} [opts] - Step options.
      * @arg {boolean} [opts.check=true] - Flag to check that browser was closed.
-     * @return {Promise&lt;void>}
-     * @throws {AssertionError} - If browser wasn't closed.
+     * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
+     * @throws {AssertionError} If browser wasn't closed.
      */
     closeBrowser: async function (opts) {
 
@@ -313,7 +328,7 @@ var BrowserSteps = {
      * @arg {number} [opts.timeout] - Timeout to wait for URL will be opened
      *  in browser, ms. Default value is `CONF.timeouts.pageLoad`.
      * @return {Promise&lt;void>}
-     * @throws {Error} - If URL wasn't opened after timeout.
+     * @throws {Error} If URL wasn't opened after timeout.
      */
     openUrl: async function (webUrl, opts) {
 
@@ -343,7 +358,7 @@ var BrowserSteps = {
      * @instance
      * @arg {object} [opts] - Step options.
      * @return {Promise&lt;void>}
-     * @throws {AssertionError} - If application URL is not defined.
+     * @throws {AssertionError} If application URL is not defined.
      */
     openApp: async function (opts) {
         expect(this.appUrl,
@@ -351,7 +366,22 @@ var BrowserSteps = {
         await this.openUrl(this.appUrl, opts);
     },
 };
+
 module.exports = BrowserSteps;
+
+/**
+ * Helper to define whether chrome option is present in options list.
+ * 
+ * @ignore
+ * @function
+ */
+var isOptPresent = (opt, opts) => {
+    var optStart = opt.split("=")[0];
+    for (var o of opts) {
+        if (o.split("=")[0] === optStart) return true;
+    };
+    return false;
+};
 </pre>
     </article>
 </section>
@@ -397,7 +427,7 @@ module.exports = BrowserSteps;
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-12-06T19:14:37+02:00
+		on 2017-12-06T23:06:34+02:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
