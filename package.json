@@ -1,6 +1,6 @@
 {
   "name": "glace-web",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "GlaceJS Web plugin",
   "main": "lib/index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   },
   "homepage": "https://glacejs.github.io/glace-web",
   "engines": {
-    "node": ">= 8.9",
-    "npm": ">= 5.5"
+    "node": ">=8.9",
+    "npm": ">=5.5"
   },
   "devDependencies": {
     "cross-spawn": "^5.1.0",
