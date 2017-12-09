@@ -2,6 +2,17 @@
 
 Provides steps for [GlaceJS](https://glacejs.github.io/glace-core/) framework to launch web UI tests in browser.
 
+## Features
+
+- Launch standalone selenium server
+- Connect to existing selenium or appium server
+- Page Object Model
+- Pointer Events
+
+## Requirements:
+
+- Installed `java` in order to launch `selenium` server.
+
 ## How to install
 
 ```
