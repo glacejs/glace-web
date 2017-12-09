@@ -49,3 +49,7 @@ If plugin is used as a part of `GlaceJS` it will be loaded automatically.
 - [config](GlaceConfig.html)
 - [fixtures](global.html)
 - [steps](WebSteps.html)
+
+## Test examples
+
+See [integration tests](https://github.com/glacejs/glace-js/blob/master/tests/integration/testWeb.js) in order to explore examples.
