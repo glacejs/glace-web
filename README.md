@@ -6,8 +6,8 @@ Provides steps for [GlaceJS](https://glacejs.github.io/glace-core/) framework to
 
 - Launch standalone selenium server
 - Connect to existing selenium or appium server
-- Page Object Model
-- Pointer Events
+- Page Object Model with weak refs
+- Browser Pointer Events
 
 ## Requirements:
 
