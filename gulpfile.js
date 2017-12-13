@@ -18,9 +18,17 @@ gulp.task("rm-docs", () => {
 });
 
 gulp.task("test-unit", () => {
-    spawn.sync("./node_modules/glace-core/bin/glace",
+    spawn.sync("./tests/run",
                [
                    "tests/unit",
+               ],
+               { stdio: "inherit" });
+});
+
+gulp.task("test-e2e", () => {
+    spawn.sync("./tests/run",
+               [
+                   "tests/e2e",
                ],
                { stdio: "inherit" });
 });
