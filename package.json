@@ -32,7 +32,7 @@
     "lib"
   ],
   "dependencies": {
-    "glace-utils": "^1.0.1",
+    "glace-utils": "^1.0.3",
     "lodash": "^4.17.4",
     "selenium-standalone": "^6.11.0",
     "weak": "^1.0.1",
