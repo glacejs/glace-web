@@ -58,12 +58,12 @@ scope("Steps", () => {
                 .to.be.rejectedWith("width");
         });
 
-        chunk("throws error if passed invalid height value", async () => {
+        chunk("throws error if invalid height value is passed", async () => {
             await expect(ctx.setViewport({ width: 100, height: null }))
                 .to.be.rejectedWith("height");
         });
 
-        chunk("throws error if passed invalid width value", async () => {
+        chunk("throws error if invalid width value is passed", async () => {
             await expect(ctx.setViewport({ width: null, height: 100 }))
                 .to.be.rejectedWith("width");
         });
