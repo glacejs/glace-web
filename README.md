@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/glacejs/glace-web.svg?branch=master)](https://travis-ci.org/glacejs/glace-web)
+
 ## GlaceJS Web plugin
 
 Provides steps for [GlaceJS](https://glacejs.github.io/glace-core/) framework to launch web UI tests in browser.
