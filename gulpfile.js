@@ -18,18 +18,37 @@ gulp.task("rm-docs", () => {
 });
 
 gulp.task("test-unit", () => {
-    spawn.sync("node",
-               [
-                   "tests/run",
-                   "tests/unit",
-               ],
-               { stdio: "inherit" });
+
+    var res = spawn.sync(
+        "./tests/run",
+        [
+            "tests/unit",
+        ],
+        { stdio: "inherit" });
+
+    if (res.error) {
+        console.log(res.error);
+        process.exit(1);
+    };
+    if (res.status) {
+        process.exit(res.status);
+    };
 });
 
 gulp.task("test-e2e", () => {
-    spawn.sync("./tests/run",
-               [
-                   "tests/e2e",
-               ],
-               { stdio: "inherit" });
+
+    var res = spawn.sync(
+        "./tests/run",
+        [
+            "tests/e2e",
+        ],
+        { stdio: "inherit" });
+
+    if (res.error) {
+        console.log(res.error);
+        process.exit(1);
+    };
+    if (res.status) {
+        process.exit(res.status);
+    };
 });
