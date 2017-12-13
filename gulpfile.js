@@ -18,8 +18,9 @@ gulp.task("rm-docs", () => {
 });
 
 gulp.task("test-unit", () => {
-    spawn.sync("./tests/run",
+    spawn.sync("node",
                [
+                   "tests/run",
                    "tests/unit",
                ],
                { stdio: "inherit" });
