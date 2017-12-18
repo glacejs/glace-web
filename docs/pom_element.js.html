@@ -40,14 +40,14 @@
 			<li class="dropdown">
 				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="module-fixtures.html">fixtures</a></li><li><a href="module-index.html">index</a></li><li><a href="module-pom_element.html">pom/element</a></li><li><a href="module-pom_event.html">pom/event</a></li>
+					<li><a href="module-fixtures.html">fixtures</a></li><li><a href="module-index.html">index</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="module-pom_element-Element.html">pom/element~Element</a></li><li><a href="module-pom_event-PointerEvents.html">pom/event~PointerEvents</a></li><li><a href="Page.html">Page</a></li>
+					<li><a href="Element.html">Element</a></li><li><a href="Page.html">Page</a></li><li><a href="PointerEvents.html">PointerEvents</a></li>
 				</ul>
 			</li>
 			
@@ -107,56 +107,67 @@
         <pre
             class="sunlight-highlight-javascript linenums">"use strict";
 /**
- * Defines classes responsible for interaction with DOM in browser context.
- *
- * @module
- */
-
-var weak = require("weak");
-
-var U = require("glace-utils");
-
-var PointerEvents = require("./event").PointerEvents;
-/**
  * Creates a new instance of `Element`.
  *
  * `Element` binds DOM control in browser context with virtual control in test.
  *
  * @class
- * @arg {string} name - control name
- * @arg {object} driver - selenium driver instance
+ * @name Element
+ * @arg {string} name - Control name.
+ * @arg {object} selector - CSS selector of DOM element.
+ * @arg {Page} page - Page with element.
  */
-var Element = module.exports = function (name, selector, page) {
+
+var weak = require("weak");
+var U = require("glace-utils");
+
+var PointerEvents = require("./event");
+
+var Element = function (name, selector, page) {
 
     this.name = name;
     this.selector = selector;
-    this.event = new PointerEvents(selector, page);
+    this._event = new PointerEvents(selector, page);
 
     this._page = weak(page);
     this._elCmd = `document.querySelector("${this.selector}")`;
+    this._webdriver = null;
+};
+/**
+ * Helper to get webdriver.
+ *
+ * @method
+ * @return {object} webdriver instance
+ */
+Element.prototype._getDriver = function () {
+    if (!this._webdriver) {
+        this._webdriver = this._page.getDriver();
+    };
+    return this._webdriver;
 };
 /**
  * Gets webdriver element.
  *
  * @method
- * @return {object} - Webdriver element.
+ * @return {object} Webdriver element.
  */
 Element.prototype.getElement = function () {
-    return this._page.getDriver().element(this.selector);
+    return this._getDriver().element(this.selector);
 };
 /**
  * Gets text content of DOM element.
  *
+ * @async
  * @method
- * @return {Promise.&lt;string>} - text value or null
+ * @return {Promise&lt;string>} text value or null
  */
 Element.prototype.getText = function () {
-    return this._page.getDriver().getText(this.selector).then(value => {
+    return this._getDriver().getText(this.selector).then(value => {
         if (value) return value.trim();
-        return this._page.getDriver().getAttribute(this.selector, "value");
+        return this._getDriver().getAttribute(this.selector, "value");
     }).then(value => {
         if (value) return value.trim();
-        return this._page.getDriver().getAttribute(this.selector, "innerHTML");
+        return this._getDriver().getAttribute(this.selector, "innerHTML");
     }).then(value => {
         if (value) return value.trim();
         return null;
@@ -165,19 +176,21 @@ Element.prototype.getText = function () {
 /**
  * Sets text to DOM element.
  *
+ * @async
  * @method
  * @arg {string} text - Text value to assign.
- * @return {Promise}
+ * @return {Promise&lt;void>}
  */
 Element.prototype.setText = function (text) {
-    return this._page.getDriver().setValue(this.selector, text);
+    return this._getDriver().setValue(this.selector, text);
 };
 /**
  * Gets DOM control location with attributes:
- *  `x`, `y`, `midX`, `midY`, `width`, `height`
+ *  `x`, `y`, `midX`, `midY`, `width`, `height`.
  *
+ * @async
  * @method
- * @return {Promise.&lt;object>} - location of control
+ * @return {Promise&lt;object>} Location of control.
  */
 Element.prototype.location = function () {
 
@@ -193,39 +206,39 @@ Element.prototype.location = function () {
         location.midY = Math.ceil(location.y + location.height / 2); \
         return location;`;
 
-    return this._page.getDriver().execute(cmd).then(result => result.value);
+    return this._getDriver().execute(cmd).then(result => result.value);
 };
 /**
  * Scrolls control into browser viewport.
  *
+ * @async
  * @method
- * @return {Promise.&lt;*>} - result of javascript execution in browser context
+ * @return {Promise&lt;void>}
  */
 Element.prototype.scrollIntoView = function () {
     var cmd = "return " + this._elCmd + ".scrollIntoView();";
-
-    return this._page.getDriver().execute(cmd).then(result => {
-        return result.value;
-    });
+    return this._getDriver().execute(cmd);
 };
 /**
  * Clicks control in browser.
  *
+ * @async
  * @method
- * @return {Promise} - result of selenium execution in browser context
+ * @return {Promise&lt;void>}
  */
 Element.prototype.click = function () {
     return this.waitForVisible().then(() => {
         return this.scrollIntoView();
     }).then(() => {
-        return this._page.getDriver().click(this.selector);
+        return this._getDriver().click(this.selector);
     });
 };
 /**
  * Clicks element in browser via pointer events.
  *
+ * @async
  * @method
- * @return {Promise}
+ * @return {Promise&lt;void>}
  */
 Element.prototype.pClick = function () {
     var x, y;
@@ -234,31 +247,32 @@ Element.prototype.pClick = function () {
     }).then(loc => {
         x = loc.midX;
         y = loc.midY;
-        return this.event.move(x, y);
+        return this._event.move(x, y);
     }).then(() => {
-        return this.event.down(x, y);
+        return this._event.down(x, y);
     }).then(() => {
-        console.log(x, y);
-        return this.event.up(x, y);
+        return this._event.up(x, y);
     });
 };
 /**
  * Taps control in browser.
  *
+ * @async
  * @method
  */
 Element.prototype.tap = Element.prototype.click;
 /**
  * Defines whether control is selected or no.
  *
+ * @async
  * @method
- * @return {Promise.&lt;boolean>} - `true` if control is selected, `false` otherwise
+ * @return {Promise&lt;boolean>} `true` if control is selected, `false` otherwise.
  */
 Element.prototype.isSelected = function () {
-    return this._page.getDriver().isSelected(this.selector).then(result => {
+    return this._getDriver().isSelected(this.selector).then(result => {
         if (result) return true;
 
-        return this._page.getDriver().getAttribute(this.selector, "class").then(result => {
+        return this._getDriver().getAttribute(this.selector, "class").then(result => {
             return result.includes("selected");
         });
     });
@@ -266,42 +280,45 @@ Element.prototype.isSelected = function () {
 /**
  * Defines whether control is exist or no.
  *
+ * @async
  * @method
- * @return {Promise.&lt;boolean>} - `true` if control is exist, `false` otherwise
+ * @return {Promise&lt;boolean>} `true` if control is exist, `false` otherwise.
  */
 Element.prototype.isExist = function () {
     var cmd = "return !!" + this._elCmd + ";";
-    return this._page.getDriver().execute(cmd).then(result => result.value);
+    return this._getDriver().execute(cmd).then(result => result.value);
 };
 /**
  * Waits for control is exist.
  *
+ * @async
  * @method
- * @arg {number} [timeout] - timeout to wait, ms
- * @return {Promise.&lt;*>} - result of selenium execution
- * @throws {TimeoutError} - If control isn't exist after timeout.
+ * @arg {number} [timeout] - Timeout to wait, ms.
+ * @return {Promise&lt;void>}
+ * @throws {TimeoutError} If control doesn't exist after timeout.
  */
 Element.prototype.waitForExist = function (timeout) {
     var timeout = U.defVal(timeout, CONF.timeouts.uiAction);
     var errMsg = this.name + " isn't exist after " + timeout + " ms";
 
-    return this._page.getDriver().waitUntil(async () => {
+    return this._getDriver().waitUntil(async () => {
         return await this.isExist();
     }, timeout, errMsg);
 };
 /**
  * Waits for control isn't exist.
  *
+ * @async
  * @method
- * @arg {number} [timeout] - timeout to wait, ms
- * @return {Promise.&lt;*>} - result of selenium execution
- * @throws {TimeoutError} - If control is still exist after timeout.
+ * @arg {number} [timeout] - Timeout to wait, ms.
+ * @return {Promise&lt;void>}
+ * @throws {TimeoutError} If control is still exist after timeout.
  */
 Element.prototype.waitForNonExist = function (timeout) {
     var timeout = U.defVal(timeout, CONF.timeouts.uiAction);
     var errMsg = `${this.name} (${this.selector}) still exists after ${timeout} ms`;
 
-    return this._page.getDriver().waitUntil(async () => {
+    return this._getDriver().waitUntil(async () => {
         return !(await this.isExist());
     }, timeout, errMsg);
 };
@@ -309,47 +326,51 @@ Element.prototype.waitForNonExist = function (timeout) {
  * Defines whether control is visible or no.
  *
  * @method
- * @return {Promise.&lt;boolean>} - `true` if control is visible, `false` otherwise
+ * @return {Promise&lt;boolean>} `true` if control is visible, `false` otherwise.
  */
 Element.prototype.isVisible = function () {
     return this.isExist().then(result => {
         if (!result) return false;
-        return this._page.getDriver().isVisible(this.selector);
+        return this._getDriver().isVisible(this.selector);
     });
 };
 /**
  * Waits for control is visible.
  *
+ * @async
  * @method
- * @arg {number} [timeout] - timeout to wait, ms
- * @return {Promise.&lt;*>} - result of selenium execution
- * @throws {TimeoutError} - If control isn't visible after timeout.
+ * @arg {number} [timeout] - Timeout to wait, ms.
+ * @return {Promise&lt;void>}
+ * @throws {TimeoutError} If control isn't visible after timeout.
  */
 Element.prototype.waitForVisible = function (timeout) {
     var timeout = U.defVal(timeout, CONF.timeouts.uiAction);
     var errMsg = `${this.name} (${this.selector}) isn't visible ` +
                  `after ${timeout} ms`;
 
-    return this._page.getDriver().waitUntil(async () => {
+    return this._getDriver().waitUntil(async () => {
         return await this.isVisible();
     }, timeout, errMsg);
 };
 /**
  * Waits for control is invisible.
  *
+ * @async
  * @method
  * @arg {number} [timeout] - timeout to wait, ms
- * @return {Promise.&lt;*>} - result of selenium execution
- * @throws {TimeoutError} - If control is still visible after timeout.
+ * @return {Promise&lt;void>}
+ * @throws {TimeoutError} If control is still visible after timeout.
  */
 Element.prototype.waitForInvisible = function (timeout) {
     var timeout = U.defVal(timeout, CONF.timeouts.uiAction);
     var errMsg = this.name + " is still visible after " + timeout + " ms";
 
-    return this._page.getDriver().waitUntil(async () => {
+    return this._getDriver().waitUntil(async () => {
         return !(await this.isVisible());
     }, timeout, errMsg);
 };
+
+module.exports = Element;
 </pre>
     </article>
 </section>
@@ -395,7 +416,7 @@ Element.prototype.waitForInvisible = function (timeout) {
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-12-15T10:15:18+02:00
+		on 2017-12-18T22:14:35+02:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

@@ -40,14 +40,14 @@
 			<li class="dropdown">
 				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="module-fixtures.html">fixtures</a></li><li><a href="module-index.html">index</a></li><li><a href="module-pom_element.html">pom/element</a></li><li><a href="module-pom_event.html">pom/event</a></li>
+					<li><a href="module-fixtures.html">fixtures</a></li><li><a href="module-index.html">index</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="module-pom_element-Element.html">pom/element~Element</a></li><li><a href="module-pom_event-PointerEvents.html">pom/event~PointerEvents</a></li><li><a href="Page.html">Page</a></li>
+					<li><a href="Element.html">Element</a></li><li><a href="Page.html">Page</a></li><li><a href="PointerEvents.html">PointerEvents</a></li>
 				</ul>
 			</li>
 			
@@ -107,66 +107,81 @@
         <pre
             class="sunlight-highlight-javascript linenums">"use strict";
 /**
- * Browser events.
- *
- * @module
- */
-
-var weak = require("weak");
-/**
  * Creates a new pointer events instance.
  *
  * @class
+ * @name PointerEvents
  * @classdesc Contains browser pointer events.
+ * @arg {string} selector - CSS selector of DOM element.
+ * @arg {Page} page - Page with element.
  */
-var PointerEvents = module.exports.PointerEvents = function (selector, page) {
-    this.selector = selector;
+
+var weak = require("weak");
+
+var PointerEvents = function (selector, page) {
+    this._selector = selector;
     this._page = weak(page);
     this._elCmd = `document.querySelector("${this._selector}")`;
+    this._webdriver = null;
+};
+/**
+ * Helper to get webdriver.
+ *
+ * @method
+ * @return {object} webdriver instance
+ */
+PointerEvents.prototype._getDriver = function () {
+    if (!this._webdriver) {
+        this._webdriver = this._page.getDriver();
+    };
+    return this._webdriver;
 };
 /**
  * Moves pointer over element by selector.
  *
+ * @async
  * @method
- * @arg {number} x - `x` coordinate
- * @arg {number} y - `y` coordinate
- * @return {Promise}
+ * @arg {number} x - `x` coordinate.
+ * @arg {number} y - `y` coordinate.
+ * @return {Promise&lt;void>}
  */
 PointerEvents.prototype.over = function (x, y) {
     var cmd = ` \
         var el = ${this._elCmd}; \
-        var ev = new PointerEvent('pointerover', \
+        var ev = new PointerEvent("pointerover", \
             { clientX: ${x}, clientY: ${y}, \
               bubbles: true, cancelable: true, view: window }); \
         el.dispatchEvent(ev);`;
 
-    return this._page.getDriver().execute(cmd);
+    return this._getDriver().execute(cmd);
 };
 /**
  * Enters pointer to element by selector.
  *
+ * @async
  * @method
- * @arg {number} x - `x` coordinate
- * @arg {number} y - `y` coordinate
- * @return {Promise}
+ * @arg {number} x - `x` coordinate.
+ * @arg {number} y - `y` coordinate.
+ * @return {Promise&lt;void>}
  */
 PointerEvents.prototype.enter = function (x, y) {
     var cmd = ` \
         var el = ${this._elCmd}; \
-        var ev = new PointerEvent('pointerenter', \
+        var ev = new PointerEvent("pointerenter", \
             { clientX: ${x}, clientY: ${y}, \
               bubbles: true, cancelable: true, view: window }); \
         el.dispatchEvent(ev);`;
 
-    return this._page.getDriver().execute(cmd);
+    return this._getDriver().execute(cmd);
 };
 /**
  * Presses pointer down on element by selector.
  *
- * @arg {string} selector - css selector
- * @arg {number} x - `x` coordinate
- * @arg {number} y - `y` coordinate
- * @return {Promise}
+ * @async
+ * @method
+ * @arg {number} x - `x` coordinate.
+ * @arg {number} y - `y` coordinate.
+ * @return {Promise&lt;void>}
  */
 PointerEvents.prototype.down = function (x, y) {
     var cmd = ` \
@@ -176,15 +191,16 @@ PointerEvents.prototype.down = function (x, y) {
               bubbles: true, cancelable: true, view: window }); \
         el.dispatchEvent(ev);`;
 
-    return this._page.getDriver().execute(cmd);
+    return this._getDriver().execute(cmd);
 };
 /**
  * Unpresses pointer up on element by selector.
  *
+ * @async
  * @method
- * @arg {number} x - `x` coordinate
- * @arg {number} y - `y` coordinate
- * @return {Promise}
+ * @arg {number} x - `x` coordinate.
+ * @arg {number} y - `y` coordinate.
+ * @return {Promise&lt;void>}
  */
 PointerEvents.prototype.up = function (x, y) {
     var cmd = ` \
@@ -194,15 +210,16 @@ PointerEvents.prototype.up = function (x, y) {
               bubbles: true, cancelable: true, view: window }); \
         el.dispatchEvent(ev);`;
 
-    return this._page.getDriver().execute(cmd);
+    return this._getDriver().execute(cmd);
 };
 /**
  * Moves pointer to element by selector.
  *
+ * @async
  * @method
- * @arg {number} x - `x` coordinate
- * @arg {number} y - `y` coordinate
- * @return {Promise}
+ * @arg {number} x - `x` coordinate.
+ * @arg {number} y - `y` coordinate.
+ * @return {Promise&lt;void>}
  */
 PointerEvents.prototype.move = function (x, y) {
     var cmd = ` \
@@ -212,15 +229,16 @@ PointerEvents.prototype.move = function (x, y) {
               bubbles: true, cancelable: true, view: window }); \
         el.dispatchEvent(ev);`;
 
-    return this._page.getDriver().execute(cmd);
+    return this._getDriver().execute(cmd);
 };
 /**
  * Cancel pointer on element by selector.
  *
+ * @async
  * @method
- * @arg {number} x - `x` coordinate
- * @arg {number} y - `y` coordinate
- * @return {Promise}
+ * @arg {number} x - `x` coordinate.
+ * @arg {number} y - `y` coordinate.
+ * @return {Promise&lt;void>}
  */
 PointerEvents.prototype.cancel = function (x, y) {
     var cmd = ` \
@@ -230,15 +248,16 @@ PointerEvents.prototype.cancel = function (x, y) {
               bubbles: true, cancelable: true, view: window }); \
         el.dispatchEvent(ev);`;
 
-    return this._page.getDriver().execute(cmd);
+    return this._getDriver().execute(cmd);
 };
 /**
  * Moves out pointer from element by selector.
  *
+ * @async
  * @method
- * @arg {number} x - `x` coordinate
- * @arg {number} y - `y` coordinate
- * @return {Promise}
+ * @arg {number} x - `x` coordinate.
+ * @arg {number} y - `y` coordinate.
+ * @return {Promise&lt;void>}
  */
 PointerEvents.prototype.out = function (x, y) {
     var cmd = ` \
@@ -248,15 +267,16 @@ PointerEvents.prototype.out = function (x, y) {
               bubbles: true, cancelable: true, view: window }); \
         el.dispatchEvent(ev);`;
 
-    return this._page.getDriver().execute(cmd);
+    return this._getDriver().execute(cmd);
 };
 /**
  * Leaves pointer from element by selector.
  *
+ * @async
  * @method
- * @arg {number} x - `x` coordinate
- * @arg {number} y - `y` coordinate
- * @return {Promise}
+ * @arg {number} x - `x` coordinate.
+ * @arg {number} y - `y` coordinate.
+ * @return {Promise&lt;void>}
  */
 PointerEvents.prototype.leave = function (x, y) {
     var cmd = ` \
@@ -266,8 +286,10 @@ PointerEvents.prototype.leave = function (x, y) {
               bubbles: true, cancelable: true, view: window }); \
         el.dispatchEvent(ev);`;
 
-    return this._page.getDriver().execute(cmd);
+    return this._getDriver().execute(cmd);
 };
+
+module.exports = PointerEvents;
 </pre>
     </article>
 </section>
@@ -313,7 +335,7 @@ PointerEvents.prototype.leave = function (x, y) {
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-12-15T10:15:18+02:00
+		on 2017-12-18T22:14:35+02:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
