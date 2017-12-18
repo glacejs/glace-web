@@ -1,3 +1,7 @@
+### v1.1.0
+
+- Actualized code of page object model, ready for production usage.
+
 ### v1.0.9
 
 - Renamed CLI option `--resolution` to `--web-resolution`. Added it to plugin help
