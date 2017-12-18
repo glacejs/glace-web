@@ -32,6 +32,7 @@
     "lib"
   ],
   "dependencies": {
+    "chai": "^4.1.2",
     "glace-utils": "^1.0.3",
     "lodash": "^4.17.4",
     "selenium-standalone": "^6.11.0",
