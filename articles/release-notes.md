@@ -1,3 +1,7 @@
+### v1.1.1
+
+- [Added](https://github.com/glacejs/glace-web/commit/0f3f458d9275066e53efa234c4ff65cd69c09c72) feature to generate page elements from selectors array or function.
+
 ### v1.1.0
 
 - Actualized code of page object model, ready for production usage.
