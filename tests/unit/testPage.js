@@ -9,7 +9,7 @@ scope("Page", () => {
         page = new Page("my page", "/my/url");
     });
 
-    test("instance", () => {
+    test("page instance", () => {
         chunk("has correct name", () => {
             expect(page.name).to.be.equal("my page");
         });
@@ -18,6 +18,50 @@ scope("Page", () => {
         });
         chunk("doesn't have webdriver", () => {
             expect(page._webdriver).to.not.exist;
+        });
+
+        chunk("has controls", () => {
+            page = new Page("p", "/", { oneEl: "#oneEl", twoEl: "#twoEl" });
+
+            expect(page.oneEl).to.exist;
+            expect(page.oneEl.selector).to.be.equal("#oneEl");
+
+            expect(page.twoEl).to.exist;
+            expect(page.twoEl.selector).to.be.equal("#twoEl");
+        });
+
+        chunk("has controls generated from function", () => {
+            page = new Page("p", "/", { el: () => ["#1"] });
+
+            expect(page.el_1).to.exist;
+            expect(page.el_1.selector).to.be.equal("#1");
+
+            expect(page.el_0).to.not.exist;
+            expect(page.el_2).to.not.exist;
+        });
+
+        chunk("has controls generated from array", () => {
+            page = new Page("p", "/", { el: ["#1"] });
+
+            expect(page.el_1).to.exist;
+            expect(page.el_1.selector).to.be.equal("#1");
+        });
+
+        chunk("has controls generated from functions array", () => {
+            page = new Page("p", "/", { el: () => [() => ["#1"]] });
+
+            expect(page.el_1_1).to.exist;
+            expect(page.el_1_1.selector).to.be.equal("#1");
+        });
+
+        chunk("throws error if selectors array is empty", () => {
+            expect(() => new Page("p", "/", { el: [] }))
+                .to.throw("should have at least 1 item");
+        });
+
+        chunk("throws error if selector has invalid type", () => {
+            expect(() => new Page("p", "/", { el: 1 }))
+                .to.throw("should be string or array or function");
         });
     });
 

@@ -18,7 +18,7 @@ scope("UI element", () => {
         el = new Element("elem", "#id", page);
     });
 
-    test("instance", () => {
+    test("element instance", () => {
         chunk("has correct name", () => {
             expect(el.name).to.be.equal("elem");
         });

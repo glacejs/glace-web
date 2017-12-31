@@ -11,7 +11,7 @@ scope("Pointer Events", () => {
         pe = new PointerEvents("#id", page);
     });
 
-    test("instance", () => {
+    test("events instance", () => {
 
         chunk("has correct selector", () => {
             expect(pe._selector).to.be.equal("#id");
@@ -30,7 +30,7 @@ scope("Pointer Events", () => {
         });
     });
 
-    test("._getDriver()", () => {
+    test("events._getDriver()", () => {
         chunk("gets webdriver", () => {
             expect(pe._getDriver().execute).to.be.equal(exec);
         });
