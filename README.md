@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/glacejs/glace-web.svg?branch=master)](https://travis-ci.org/glacejs/glace-web)
-
-[Release Notes](tutorial-release-notes.html)
+ | [Source Code](https://github.com/glacejs/glace-web)
+ | [Release Notes](tutorial-release-notes.html)
 
 ## GlaceJS Web plugin
 
