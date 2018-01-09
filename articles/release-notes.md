@@ -1,3 +1,7 @@
+### v1.1.2
+
+- [Fixed](https://github.com/glacejs/glace-web/commit/02a6368554ded6e2ab9603fefcdeac5629518a61) bug that `activateWeb` step overrides already set `webUrl` property.
+
 ### v1.1.1
 
 - [Added](https://github.com/glacejs/glace-web/commit/0f3f458d9275066e53efa234c4ff65cd69c09c72) feature to generate page elements by template from selectors array or function.
