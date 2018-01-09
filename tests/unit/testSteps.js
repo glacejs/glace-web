@@ -6,14 +6,36 @@ var Steps = require("../../lib/steps");
 scope("Steps", () => {
     var ctx;
 
-    test(".setViewport()", () => {
-
-        before(() => {
-            ctx = {};
-            ctx.setViewport = Steps.setViewport;
-        });
+    test(".activateWeb()", () => {
 
         beforeChunk(() => {
+            ctx = {};
+            ctx.activateWeb = Steps.activateWeb;
+            ctx.__wdio = { remote: sinon.stub().returns("driver") };
+            CONF.web.url = "https://my.domain.com";
+        });
+
+        chunk("sets webdriver and webUrl", () => {
+            ctx.activateWeb();
+            expect(ctx.__wdio.remote.calledOnce).to.be.true;
+            expect(ctx.webdriver).to.be.equal("driver");
+            expect(ctx.webUrl).to.be.equal(CONF.web.url);
+        });
+
+        chunk("sets webdriver only", () => {
+            var url = ctx.webUrl = "https://other.domain.com";
+            ctx.activateWeb();
+            expect(ctx.__wdio.remote.calledOnce).to.be.true;
+            expect(ctx.webdriver).to.be.equal("driver");
+            expect(ctx.webUrl).to.be.equal(url);
+        });
+    });
+
+    test(".setViewport()", () => {
+
+        beforeChunk(() => {
+            ctx = {};
+            ctx.setViewport = Steps.setViewport;
             ctx.webdriver = {
                 setViewportSize: sinon.spy(),
                 getViewportSize: sinon.stub(),
