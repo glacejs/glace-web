@@ -40,7 +40,8 @@ scope("Pointer Events", () => {
         test(`.${event}()`, () => {
             chunk("to selector coords", async () => {
                 await pe[event](111, 222);
-                expect(exec.calledOnce).to.be.true;
+                expect(exec).to.be.calledOnce;
+                expect(exec.args[0][0]).to.include("isPrimary: true");
                 expect(exec.args[0][0]).to.include(pe._elCmd);
                 expect(exec.args[0][0]).to.include(111);
                 expect(exec.args[0][0]).to.include(222);
