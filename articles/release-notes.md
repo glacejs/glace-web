@@ -1,3 +1,7 @@
+### v1.1.3
+
+- [Used](https://github.com/glacejs/glace-web/commit/54b69fb528a2d954bed9467ce9a2e7fe6cfa0ff3) `isPrimary: true` for `PointerEvents`.
+
 ### v1.1.2
 
 - [Fixed](https://github.com/glacejs/glace-web/commit/02a6368554ded6e2ab9603fefcdeac5629518a61) bug that `activateWeb` step overrides already set `webUrl` property.
