@@ -1,3 +1,7 @@
+### v1.1.4
+
+- [Used](https://github.com/glacejs/glace-web/commit/58f0f720062d5c8c72cf11b189544a8acda34f0d) docstring style in steps.
+
 ### v1.1.3
 
 - [Used](https://github.com/glacejs/glace-web/commit/54b69fb528a2d954bed9467ce9a2e7fe6cfa0ff3) `isPrimary: true` for `PointerEvents`.
