@@ -126,26 +126,31 @@ var defChromeOpts;
 var BrowserSteps = {
     /* imports */
     __wdio: wdio,
-    /**
-     * Helper to activate web application.
-     *
-     * @method
-     * @instance
-     */
+
     activateWeb: function () {
+        /**
+         * Helper to activate web application.
+         *
+         * @memberOf BrowserSteps
+         * @method activateWeb
+         * @instance
+         */
+
         this.webdriver = this.__wdio.remote(CONF.webdriver);
         this.webUrl = this.webUrl || CONF.web.url;
     },
-    /**
-     * Step to install selenium drivers.
-     *
-     * @async
-     * @method
-     * @instance
-     * @return {Promise&lt;void>}
-     * @throws {Error} If there was error during drivers installation.
-     */
+
     installSeleniumDrivers: async function () {
+        /**
+         * Step to install selenium drivers.
+         *
+         * @async
+         * @memberOf BrowserSteps
+         * @method installSeleniumDrivers
+         * @instance
+         * @return {Promise&lt;void>}
+         * @throws {Error} If there was error during drivers installation.
+         */
 
         var opts = {
             logger: LOG.debug.bind(LOG),
@@ -159,17 +164,19 @@ var BrowserSteps = {
             });
         });
     },
-    /**
-     * Step to start selenium server. Step recall will be skipped if
-     *  selenium server wasn't stopped before.
-     *
-     * @async
-     * @method
-     * @instance
-     * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
-     * @throws {Error} If there was error on selenium start.
-     */
+
     startSeleniumServer: async function () {
+        /**
+         * Step to start selenium server. Step recall will be skipped if
+         *  selenium server wasn't stopped before.
+         *
+         * @async
+         * @memberOf BrowserSteps
+         * @method startSeleniumServer
+         * @instance
+         * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
+         * @throws {Error} If there was error on selenium start.
+         */
 
         if (this._seleniumProc) {
             LOG.warn("Step to start selenium server was passed already");
@@ -188,17 +195,19 @@ var BrowserSteps = {
         });
         return true;
     },
-    /**
-     * Step to stop selenium server. Step call will be skipped if selenium
-     *  server wasn't started before.
-     *
-     * @async
-     * @method
-     * @instance
-     * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
-     * @throws {Error} If there was error on selenium stop.
-     */
+
     stopSeleniumServer: async function () {
+        /**
+         * Step to stop selenium server. Step call will be skipped if selenium
+         *  server wasn't started before.
+         *
+         * @async
+         * @memberOf BrowserSteps
+         * @method stopSeleniumServer
+         * @instance
+         * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
+         * @throws {Error} If there was error on selenium stop.
+         */
 
         if (!this._seleniumProc) {
             LOG.warn("Step to start selenium server wasn't passed yet");
@@ -219,21 +228,23 @@ var BrowserSteps = {
         });
         return true;
     },
-    /**
-     * Step to launch browser. Step recall will be skipped if browser
-     *  wasn't closed before.
-     *
-     * @async
-     * @method
-     * @instance
-     * @arg {object} [opts] - Step options.
-     * @arg {boolean} [opts.check=true] - Flag to check that browser was
-     *  launched.
-     * @arg {string[]} [opts.chromeOpts=[]] - List of chrome options.
-     * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
-     * @throws {AssertionError} If browser wasn't launched.
-     */
+
     launchBrowser: async function (opts) {
+        /**
+         * Step to launch browser. Step recall will be skipped if browser
+         *  wasn't closed before.
+         *
+         * @async
+         * @memberOf BrowserSteps
+         * @method launchBrowser
+         * @instance
+         * @arg {object} [opts] - Step options.
+         * @arg {boolean} [opts.check=true] - Flag to check that browser was
+         *  launched.
+         * @arg {string[]} [opts.chromeOpts=[]] - List of chrome options.
+         * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
+         * @throws {AssertionError} If browser wasn't launched.
+         */
 
         if (this._isBrowserLaunched) {
             LOG.debug("Step to launch browser was passed already");
@@ -285,21 +296,23 @@ var BrowserSteps = {
         this._isBrowserLaunched = true;
         return true;
     },
-    /**
-     * Step to set browser viewport size.
-     * 
-     * @async
-     * @method
-     * @instance
-     * @arg {object} [opts] - Step options.
-     * @arg {number} [opts.width] - Browser viewport width.
-     * @arg {number} [opts.height] - Browser viewport height.
-     * @arg {boolean} [opts.check=true] - Flag to check step result.
-     * @return {boolean} `true` when step is executed.
-     * @throws {AssertionError} If width or height values are not a number.
-     * @throws {AssertionError} If viewport size wasn't changed correctly.
-     */
+
     setViewport: async function (opts) {
+        /**
+         * Step to set browser viewport size.
+         * 
+         * @async
+         * @memberOf BrowserSteps
+         * @method setViewport
+         * @instance
+         * @arg {object} [opts] - Step options.
+         * @arg {number} [opts.width] - Browser viewport width.
+         * @arg {number} [opts.height] - Browser viewport height.
+         * @arg {boolean} [opts.check=true] - Flag to check step result.
+         * @return {boolean} `true` when step is executed.
+         * @throws {AssertionError} If width or height values are not a number.
+         * @throws {AssertionError} If viewport size wasn't changed correctly.
+         */
 
         opts = U.defVal(opts, {});
         var width = U.defVal(opts.width, CONF.web.width);
@@ -326,19 +339,21 @@ var BrowserSteps = {
 
         return true;
     },
-    /**
-     * Step to close browser. Step will be skipped if browser wasn't launched
-     *  before.
-     *
-     * @async
-     * @method
-     * @instance
-     * @arg {object} [opts] - Step options.
-     * @arg {boolean} [opts.check=true] - Flag to check that browser was closed.
-     * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
-     * @throws {AssertionError} If browser wasn't closed.
-     */
+
     closeBrowser: async function (opts) {
+        /**
+         * Step to close browser. Step will be skipped if browser wasn't launched
+         *  before.
+         *
+         * @async
+         * @memberOf BrowserSteps
+         * @method closeBrowser
+         * @instance
+         * @arg {object} [opts] - Step options.
+         * @arg {boolean} [opts.check=true] - Flag to check that browser was closed.
+         * @return {Promise&lt;boolean>} `true` if step is executed, `false` if skipped.
+         * @throws {AssertionError} If browser wasn't closed.
+         */
 
         if (!this._isBrowserLaunched) {
             LOG.debug("Step to launch browser wasn't passed yet");
@@ -358,34 +373,39 @@ var BrowserSteps = {
         this._isBrowserLaunched = false;
         return true;
     },
-    /**
-     * Step to restart browser.
-     *
-     * @async
-     * @method
-     * @instance
-     * @arg {object} [opts] - Step options.
-     * @return {Promise&lt;void>}
-     */
+
     restartBrowser: async function (opts) {
+        /**
+         * Step to restart browser.
+         *
+         * @async
+         * @memberOf BrowserSteps
+         * @method restartBrowser
+         * @instance
+         * @arg {object} [opts] - Step options.
+         * @return {Promise&lt;void>}
+         */
+
         await this.closeBrowser(opts);
         await this.launchBrowser(opts);
     },
-    /**
-     * Step to open URL in browser.
-     *
-     * @async
-     * @method
-     * @instance
-     * @arg {string} pageUrl - URL which should be opened in browser.
-     * @arg {object} [opts] - Step options.
-     * @arg {boolean} [opts.check=true] - Flag to check that URL is opened.
-     * @arg {number} [opts.timeout] - Timeout to wait for URL will be opened
-     *  in browser, ms. Default value is `CONF.timeouts.pageLoad`.
-     * @return {Promise&lt;void>}
-     * @throws {Error} If URL wasn't opened after timeout.
-     */
+
     openUrl: async function (webUrl, opts) {
+        /**
+         * Step to open URL in browser.
+         *
+         * @async
+         * @memberOf BrowserSteps
+         * @method openUrl
+         * @instance
+         * @arg {string} pageUrl - URL which should be opened in browser.
+         * @arg {object} [opts] - Step options.
+         * @arg {boolean} [opts.check=true] - Flag to check that URL is opened.
+         * @arg {number} [opts.timeout] - Timeout to wait for URL will be opened
+         *  in browser, ms. Default value is `CONF.timeouts.pageLoad`.
+         * @return {Promise&lt;void>}
+         * @throws {Error} If URL wasn't opened after timeout.
+         */
 
         opts = U.defVal(opts, {});
         var check = U.defVal(opts.check, true);
@@ -405,17 +425,20 @@ var BrowserSteps = {
             }, timeout, errMsg);
         };
     },
-    /**
-     * Step to open application URL in browser.
-     *
-     * @async
-     * @method
-     * @instance
-     * @arg {object} [opts] - Step options.
-     * @return {Promise&lt;void>}
-     * @throws {AssertionError} If application URL is not defined.
-     */
+
     openApp: async function (opts) {
+        /**
+         * Step to open application URL in browser.
+         *
+         * @async
+         * @memberOf BrowserSteps
+         * @method openApp
+         * @instance
+         * @arg {object} [opts] - Step options.
+         * @return {Promise&lt;void>}
+         * @throws {AssertionError} If application URL is not defined.
+         */
+
         expect(this.webUrl,
                "Web URL isn't defined").to.exist;
         await this.openUrl(this.webUrl, opts);
@@ -482,7 +505,7 @@ var isOptPresent = (opt, opts) => {
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2018-02-07T21:18:05+02:00
+		on 2018-03-12T23:56:59+02:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
