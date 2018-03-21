@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "cross-spawn": "^5.1.0",
-    "glace-core": "^1.1.7",
+    "glace-core": "^1.3.8",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "ink-docstrap": "^1.3.0",
@@ -33,10 +33,10 @@
   ],
   "dependencies": {
     "chai": "^4.1.2",
-    "glace-utils": "^1.0.7",
+    "glace-utils": "^1.1.7",
     "lodash": "^4.17.5",
-    "selenium-standalone": "^6.12.0",
+    "selenium-standalone": "^6.13.0",
     "weak": "^1.0.1",
-    "webdriverio": "^4.10.2"
+    "webdriverio": "^4.12.0"
   }
 }
