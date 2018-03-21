@@ -1,3 +1,8 @@
+### v1.1.5
+
+- [Fixed](https://github.com/glacejs/glace-web/commit/089ae9d4d6a25d8f86e4153177b9de19f2c47011) absent timeout value in error message.
+- Updated selenium version.
+
 ### v1.1.4
 
 - [Used](https://github.com/glacejs/glace-web/commit/58f0f720062d5c8c72cf11b189544a8acda34f0d) docstring style in steps.
