@@ -23,27 +23,27 @@ test("plugin help contains option", () => {
     });
 
     chunk("selenium-addr", () => {
-        expect(opts["selenium-addr"]).to.exist;
+        expect(opts["selenium-address <host:port>"]).to.exist;
     });
 
     chunk("platform", () => {
-        expect(opts["platform"]).to.exist;
+        expect(opts["platform [type]"]).to.exist;
     });
 
     chunk("browser", () => {
-        expect(opts["browser"]).to.exist;
+        expect(opts["browser [name]"]).to.exist;
     });
 
     chunk("device", () => {
-        expect(opts["device"]).to.exist;
+        expect(opts["device <name>"]).to.exist;
     });
 
     chunk("os-version", () => {
-        expect(opts["os-version"]).to.exist;
+        expect(opts["os-version <value>"]).to.exist;
     });
 
     chunk("ios-engine", () => {
-        expect(opts["ios-engine"]).to.exist;
+        expect(opts["ios-engine <name>"]).to.exist;
     });
 
     chunk("chrome-incognito", () => {
