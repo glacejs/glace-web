@@ -155,14 +155,18 @@ var BrowserSteps = {
         var opts = {
             logger: LOG.debug.bind(LOG),
         };
+
+        LOG.info("Installing selenium drivers...");
+
         await new Promise((resolve, reject) => {
 
             selenium.install(opts, err => {
-                if (err) reject(err);
-                LOG.debug("Selenium drivers are installed");
+                if (err) return reject(err);
                 resolve();
             });
         });
+
+        LOG.info("Selenium drivers are installed");
     },
 
     startSeleniumServer: async function () {
@@ -184,15 +188,18 @@ var BrowserSteps = {
         };
 
         var opts = {};
-        this._seleniumProc = await new Promise((resolve, reject) => {
 
+        LOG.info("Starting selenium server...");
+
+        this._seleniumProc = await new Promise((resolve, reject) => {
             selenium.start(opts, (err, child) => {
-                if (err) reject(err);
-                LOG.debug(
-                    `Selenium server starts with PID ${child.pid}`);
+                if (err) return reject(err);
                 resolve(child);
-            })
+            });
         });
+
+        LOG.info(`Selenium server is started with PID ${this._seleniumProc.pid}`);
+
         return true;
     },
 
@@ -214,11 +221,13 @@ var BrowserSteps = {
             return false;
         };
 
+        LOG.info("Stopping selenium server...");
+
         await new Promise((resolve, reject) => {
 
             this._seleniumProc.on("exit", (code, signal) => {
-                LOG.debug(`Selenium server was stopped with`,
-                          `code ${code} and signal ${signal}`);
+                LOG.debug("Selenium server was stopped with",
+                    `code ${code} and signal ${signal}`);
                 delete this._seleniumProc;
                 resolve();
             });
@@ -226,6 +235,9 @@ var BrowserSteps = {
             var result = this._seleniumProc.kill("SIGINT");
             if (!result) reject("Oops! Can't kill selenium server");
         });
+
+        LOG.info("Selenium server is stopped");
+
         return true;
     },
 
@@ -253,6 +265,9 @@ var BrowserSteps = {
 
         opts = U.defVal(opts, {});
         var check = U.defVal(opts.check, true);
+        var opt;
+
+        LOG.info("Launching browser via selenium...");
 
         if (CONF.web.platform === "pc" &amp;&amp;
                 this.webdriver.desiredCapabilities.browserName === "chrome") {
@@ -270,12 +285,12 @@ var BrowserSteps = {
                     `proxy-server=${U.hostname}:${CONF.proxy.globalPort}`,
                     `proxy-bypass-list=localhost,127.0.0.1,${U.hostname}`,
                 ];
-                for (var opt of proxyOptions) {
+                for (opt of proxyOptions) {
                     if (!isOptPresent(opt, chromeOpts)) chromeOpts.push(opt);
                 };
             };
 
-            for (var opt of defChromeOpts) {
+            for (opt of defChromeOpts) {
                 if (!isOptPresent(opt, chromeOpts)) chromeOpts.push(opt);
             };
 
@@ -286,7 +301,7 @@ var BrowserSteps = {
 
         if (check) {
             expect(await this.webdriver.session(),
-                   "Browser wasn't launched").to.exist;
+                "Browser wasn't launched").to.exist;
         };
 
         if (CONF.web.width &amp;&amp; CONF.web.height &amp;&amp; CONF.web.platform === "pc") {
@@ -294,6 +309,9 @@ var BrowserSteps = {
         };
 
         this._isBrowserLaunched = true;
+
+        LOG.info("Browser is launched");
+
         return true;
     },
 
@@ -322,6 +340,8 @@ var BrowserSteps = {
         expect(width, "Invalid browser viewport width").to.be.a("number");
         expect(height, "Invalid browser viewport height").to.be.a("number");
 
+        LOG.info(`Setting browser viewport to [width=${width}, height=${height}]...`);
+
         await this
             .webdriver
             .setViewportSize({ width: width, height: height });
@@ -330,12 +350,14 @@ var BrowserSteps = {
             var viewport = await this.webdriver.getViewportSize();
 
             expect(viewport.width,
-                   "Invalid browser viewport width")
+                "Invalid browser viewport width")
                 .to.be.equal(width);
             expect(viewport.height,
-                   "Invalid browser viewport height")
+                "Invalid browser viewport height")
                 .to.be.equal(height);
         };
+
+        LOG.info("Browser viewport size is set");
 
         return true;
     },
@@ -363,14 +385,19 @@ var BrowserSteps = {
         opts = U.defVal(opts, {});
         opts.check = U.defVal(opts.check, true);
 
+        LOG.info("Closing browser...");
+
         await this.webdriver.end();
         await this.pause(1, "webdriver process will be stopped");
 
         if (opts.check) {
             expect(await this.webdriver.session(),
-                   "Browser wasn't closed").to.not.exist;
+                "Browser wasn't closed").to.not.exist;
         };
         this._isBrowserLaunched = false;
+
+        LOG.info("Browser is closed");
+
         return true;
     },
 
@@ -411,6 +438,8 @@ var BrowserSteps = {
         var check = U.defVal(opts.check, true);
         var timeout = U.defVal(opts.timeout, CONF.timeouts.pageLoad);
 
+        LOG.info(`Openning URL ${webUrl} in browser...`);
+
         await this.webdriver.url(webUrl);
 
         if (check) {
@@ -420,10 +449,12 @@ var BrowserSteps = {
             await this.webdriver.waitUntil(async () => {
                 var curUrl = await this.webdriver.getUrl();
                 LOG.debug(`Compare current URL ${curUrl}`,
-                          `with expected ${webUrl}`);
+                    `with expected ${webUrl}`);
                 return curUrl.startsWith(webUrl);
             }, timeout, errMsg);
         };
+
+        LOG.info("URL is opened");
     },
 
     openApp: async function (opts) {
@@ -440,7 +471,7 @@ var BrowserSteps = {
          */
 
         expect(this.webUrl,
-               "Web URL isn't defined").to.exist;
+            "Web URL isn't defined").to.exist;
         await this.openUrl(this.webUrl, opts);
     },
 };
@@ -505,7 +536,7 @@ var isOptPresent = (opt, opts) => {
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2018-03-21T21:33:04+02:00
+		on 2018-03-23T23:47:29+02:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
