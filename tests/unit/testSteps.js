@@ -62,8 +62,8 @@ scope("Steps", () => {
 
         chunk("doesn't check viewport size if check is disabled", async () => {
             expect(await ctx.setViewport({ width: 100,
-                                             height: 100,
-                                             check: false })).to.be.true;
+                height: 100,
+                check: false })).to.be.true;
             expect(ctx.webdriver.setViewportSize.calledOnce).to.be.true;
             expect(ctx.webdriver.getViewportSize.calledOnce).to.be.false;
         });
