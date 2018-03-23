@@ -1,3 +1,9 @@
+### v1.1.6
+
+- [Added](https://github.com/glacejs/glace-web/commit/3d3b6a55549ba147396d9a74a71351b6a978648d) project workflow commands.
+- [Fixed](https://github.com/glacejs/glace-web/commit/112a3126cba4671ebb78b3a0438a12cc4054ed25) plugin help items.
+- [Logged](https://github.com/glacejs/glace-web/commit/0f7a1e6f870892d528882538cee68986861862aa) steps.
+
 ### v1.1.5
 
 - [Fixed](https://github.com/glacejs/glace-web/commit/089ae9d4d6a25d8f86e4153177b9de19f2c47011) absent timeout value in error message.
