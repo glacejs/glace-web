@@ -7,7 +7,7 @@ scope("Pointer Events", () => {
 
     beforeChunk(() => {
         exec = sinon.spy();
-        page = { getDriver: () => { return { execute: exec } } };
+        page = { getDriver: () => { return { execute: exec }; } };
         pe = new PointerEvents("#id", page);
     });
 
