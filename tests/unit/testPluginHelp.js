@@ -6,8 +6,8 @@ test("plugin help contains option", () => {
 
     var opts = pluginHelp({ options: opts => opts }, d => d);
 
-    chunk("dont-install-web-drivers", () => {
-        expect(opts["dont-install-web-drivers"]).to.exist;
+    chunk("update-web-drivers", () => {
+        expect(opts["update-web-drivers"]).to.exist;
     });
 
     chunk("web", () => {
