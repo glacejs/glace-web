@@ -1,3 +1,10 @@
+### v1.1.7
+
+- [Added](https://github.com/glacejs/glace-web/commit/de7991582d3121a2f985184f9e87f910a087736c) `CLI` option to launch chrome in headless mode.
+- [Added](https://github.com/glacejs/glace-web/commit/a62aba0c73fdff28cf30b54a381d29d0d6e1be69) `CLI` option to provide chrome options.
+- [Added](https://github.com/glacejs/glace-web/commit/f903d772866de14a7591c125af839bf465485257) `CLI` option to update selenium drivers.
+- [Added](https://github.com/glacejs/glace-web/commit/78d93b05aa9c89738b86e1c206b09c4896a0a8c5) to provide custom [selenium-standalone](https://github.com/vvo/selenium-standalone) options.
+
 ### v1.1.6
 
 - [Added](https://github.com/glacejs/glace-web/commit/3d3b6a55549ba147396d9a74a71351b6a978648d) project workflow commands.
