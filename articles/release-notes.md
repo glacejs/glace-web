@@ -1,3 +1,7 @@
+### v1.1.8
+
+- [Fixed](https://github.com/glacejs/glace-web/commit/584f8faa88429c0411a2b238068f2548de1bfc47) page load timeout default value.
+
 ### v1.1.7
 
 - [Added](https://github.com/glacejs/glace-web/commit/de7991582d3121a2f985184f9e87f910a087736c) `CLI` option to launch chrome in headless mode.
