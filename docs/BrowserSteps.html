@@ -193,6 +193,170 @@
             
 <hr>
 <dt>
+    <h4 class="name" id="._setChromeOpts"><span class="type-signature">&lt;static> </span>_setChromeOpts( [chromeOpts])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Helper to set chrome options.</p>
+<p>It composes chrome options list in next order:</p>
+<ul>
+<li>user provided options</li>
+<li>proxy options if they are not present in list</li>
+<li>default config options if they are not present in list</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>chromeOpts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    []
+                
+                </td>
+            
+
+            <td class="description last"><p>List of chrome options.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="steps_browser.js.html">steps/browser.js</a>,
+				 <a href="steps_browser.js.html#sunlight-1-line-217">line 217</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
     <h4 class="name" id="activateWeb"><span class="type-signature"></span>activateWeb()</h4>
     
     
@@ -469,7 +633,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="steps_browser.js.html">steps/browser.js</a>,
-				 <a href="steps_browser.js.html#sunlight-1-line-271">line 271</a>
+				 <a href="steps_browser.js.html#sunlight-1-line-291">line 291</a>
 			</li>
 		</ul>
 	</dd>
@@ -671,7 +835,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="steps_browser.js.html">steps/browser.js</a>,
-				 <a href="steps_browser.js.html#sunlight-1-line-41">line 41</a>
+				 <a href="steps_browser.js.html#sunlight-1-line-42">line 42</a>
 			</li>
 		</ul>
 	</dd>
@@ -981,7 +1145,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="steps_browser.js.html">steps/browser.js</a>,
-				 <a href="steps_browser.js.html#sunlight-1-line-150">line 150</a>
+				 <a href="steps_browser.js.html#sunlight-1-line-151">line 151</a>
 			</li>
 		</ul>
 	</dd>
@@ -1058,6 +1222,13 @@
 
 
         
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">await SS.launchBrowser();
+await SS.launchBrowser({ chromeOpts: [&quot;headless&quot;, &quot;user-data-dir=/path/to/dir&quot;] });</pre>
+
 
     
 </dd>
@@ -1183,7 +1354,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="steps_browser.js.html">steps/browser.js</a>,
-				 <a href="steps_browser.js.html#sunlight-1-line-366">line 366</a>
+				 <a href="steps_browser.js.html#sunlight-1-line-386">line 386</a>
 			</li>
 		</ul>
 	</dd>
@@ -1522,7 +1693,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="steps_browser.js.html">steps/browser.js</a>,
-				 <a href="steps_browser.js.html#sunlight-1-line-326">line 326</a>
+				 <a href="steps_browser.js.html#sunlight-1-line-346">line 346</a>
 			</li>
 		</ul>
 	</dd>
@@ -1720,7 +1891,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="steps_browser.js.html">steps/browser.js</a>,
-				 <a href="steps_browser.js.html#sunlight-1-line-310">line 310</a>
+				 <a href="steps_browser.js.html#sunlight-1-line-330">line 330</a>
 			</li>
 		</ul>
 	</dd>
@@ -2036,7 +2207,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="steps_browser.js.html">steps/browser.js</a>,
-				 <a href="steps_browser.js.html#sunlight-1-line-224">line 224</a>
+				 <a href="steps_browser.js.html#sunlight-1-line-244">line 244</a>
 			</li>
 		</ul>
 	</dd>
@@ -2265,7 +2436,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="steps_browser.js.html">steps/browser.js</a>,
-				 <a href="steps_browser.js.html#sunlight-1-line-76">line 76</a>
+				 <a href="steps_browser.js.html#sunlight-1-line-77">line 77</a>
 			</li>
 		</ul>
 	</dd>
@@ -2406,7 +2577,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="steps_browser.js.html">steps/browser.js</a>,
-				 <a href="steps_browser.js.html#sunlight-1-line-112">line 112</a>
+				 <a href="steps_browser.js.html#sunlight-1-line-113">line 113</a>
 			</li>
 		</ul>
 	</dd>
@@ -2541,7 +2712,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2018-04-02T18:50:37+03:00
+		on 2018-04-07T12:26:46+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
