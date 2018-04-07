@@ -45,9 +45,10 @@ scope("Steps", () => {
         beforeChunk(() => {
             ctx.launchBrowser = Steps.launchBrowser;
             ctx._setChromeOpts = sinon.spy();
+            ctx._setTimeouts = sinon.spy();
             ctx.setViewport = sinon.spy();
             ctx.webdriver = {
-                desiredCapabilities: { browserName: "Chrome" },
+                desiredCapabilities: { browserName: "chrome" },
                 init: sinon.spy(),
                 session: sinon.stub().returns("session"),
             };
@@ -68,6 +69,7 @@ scope("Steps", () => {
             CONF.web.platform = "android";
             expect(await ctx.launchBrowser({ check: false })).to.be.true;
             expect(ctx.webdriver.init).to.be.calledOnce;
+            expect(ctx._setTimeouts).to.be.calledOnce;
             expect(ctx._isBrowserLaunched).to.be.true;
         });
 
