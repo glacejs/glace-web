@@ -1,3 +1,8 @@
+### v1.1.9
+
+- [Decomposed](https://github.com/glacejs/glace-web/commit/36775babf7f39ef6703ed11958c30a647b48f855) chrome options.
+- [Set](https://github.com/glacejs/glace-web/commit/4fc31b1b2943fcccb398a668fbc541ac4881028d) page load timeout.
+
 ### v1.1.8
 
 - [Fixed](https://github.com/glacejs/glace-web/commit/584f8faa88429c0411a2b238068f2548de1bfc47) page load timeout default value.
