@@ -160,19 +160,30 @@ Element.prototype.getElement = function () {
  *
  * @async
  * @method
- * @return {Promise&lt;string>} text value or null
+ * @arg {object} [opts] - Options.
+ * @arg {boolean} [opts.now=false] - Make it immediately.
+ * @arg {?number} [opts.timeout] - Time to wait for element visibility, sec.
+ * @return {Promise&lt;string>} Text value or null.
  */
-Element.prototype.getText = function () {
-    return this._getDriver().getText(this.selector).then(value => {
-        if (value) return value.trim();
-        return this._getDriver().getAttribute(this.selector, "value");
-    }).then(value => {
-        if (value) return value.trim();
-        return this._getDriver().getAttribute(this.selector, "innerHTML");
-    }).then(value => {
-        if (value) return value.trim();
-        return null;
-    });
+Element.prototype.getText = async function (opts) {
+
+    opts = U.defVal(opts, {});
+    var now = U.defVal(opts.now, false);
+
+    if (!now) {
+        await this.waitForVisible(opts.timeout);
+    };
+
+    var value = await this._getDriver().getText(this.selector);
+    if (value) return value.trim();
+
+    value = await this._getDriver().getAttribute(this.selector, "value");
+    if (value) return value.trim();
+
+    value = await this._getDriver().getAttribute(this.selector, "innerHTML");
+    if (value) return value.trim();
+
+    return null;
 };
 /**
  * Sets text to DOM element.
@@ -180,10 +191,24 @@ Element.prototype.getText = function () {
  * @async
  * @method
  * @arg {string} text - Text value to assign.
- * @return {Promise&lt;void>}
+ * @arg {object} [opts] - Options.
+ * @arg {boolean} [opts.now=false] - Make it immediately.
+ * @arg {?number} [opts.timeout] - Time to wait for element visibility, sec.
+ * @arg {boolean} [opts.scroll=true] - Scroll to element.
+ * @return {Promise}
  */
-Element.prototype.setText = function (text) {
-    return this._getDriver().setValue(this.selector, text);
+Element.prototype.setText = async function (text, opts) {
+
+    opts = U.defVal(opts, {});
+    var now = U.defVal(opts.now, false);
+    var scroll = U.defVal(opts.scroll, true);
+
+    if (scroll) {
+        await this.scrollIntoView(opts);
+    } else if (!now) {
+        await this.waitForVisible(opts.timeout);
+    };
+    await this._getDriver().setValue(this.selector, text);
 };
 /**
  * Gets DOM control location with attributes:
@@ -214,52 +239,85 @@ Element.prototype.location = function () {
  *
  * @async
  * @method
- * @return {Promise&lt;void>}
+ * @arg {object} [opts] - Options.
+ * @arg {boolean} [opts.now=false] - Make it immediately.
+ * @arg {?number} [opts.timeout] - Time to wait for element visibility, sec.
+ * @return {Promise}
  */
-Element.prototype.scrollIntoView = function () {
+Element.prototype.scrollIntoView = async function (opts) {
+
+    opts = U.defVal(opts, {});
+    var now = U.defVal(opts.now, false);
+
+    if (!now) {
+        await this.waitForVisible(opts.timeout);
+    };
+
     var cmd = "return " + this._elCmd + ".scrollIntoView();";
-    return this._getDriver().execute(cmd);
+    await this._getDriver().execute(cmd);
 };
 /**
  * Clicks control in browser.
  *
  * @async
  * @method
- * @return {Promise&lt;void>}
+ * @arg {object} [opts] - Options.
+ * @arg {boolean} [opts.now=false] - Make it immediately.
+ * @arg {?number} [opts.timeout] - Time to wait for element visibility, sec.
+ * @arg {boolean} [opts.scroll=true] - Scroll to element.
+ * @return {Promise}
  */
-Element.prototype.click = function () {
-    return this.waitForVisible().then(() => {
-        return this.scrollIntoView();
-    }).then(() => {
-        return this._getDriver().click(this.selector);
-    });
+Element.prototype.click = async function (opts) {
+
+    opts = U.defVal(opts, {});
+    var now = U.defVal(opts.now, false);
+    var scroll = U.defVal(opts.scroll, true);
+
+    if (scroll) {
+        await this.scrollIntoView(opts);
+    } else if (!now) {
+        await this.waitForVisible(opts.timeout);
+    };
+    await this._getDriver().click(this.selector);
 };
 /**
  * Clicks element in browser via pointer events.
  *
  * @async
  * @method
- * @return {Promise&lt;void>}
+ * @arg {object} [opts] - Options.
+ * @arg {boolean} [opts.now=false] - Make it immediately.
+ * @arg {?number} [opts.timeout] - Time to wait for element visibility, sec.
+ * @arg {boolean} [opts.scroll=true] - Scroll to element.
+ * @return {Promise}
  */
-Element.prototype.pClick = function () {
-    var x, y;
-    return this.waitForVisible().then(() => {
-        return this.location();
-    }).then(loc => {
-        x = loc.midX;
-        y = loc.midY;
-        return this._event.move(x, y);
-    }).then(() => {
-        return this._event.down(x, y);
-    }).then(() => {
-        return this._event.up(x, y);
-    });
+Element.prototype.pClick = async function (opts) {
+
+    opts = U.defVal(opts, {});
+    var now = U.defVal(opts.now, false);
+    var scroll = U.defVal(opts.scroll, true);
+
+    if (scroll) {
+        await this.scrollIntoView(opts);
+    } else if (!now) {
+        await this.waitForVisible(opts.timeout);
+    };
+
+    var loc = await this.location();
+    await this._event.move(loc.midX, loc.midY);
+    await this._event.down(loc.midX, loc.midY);
+    await this._event.up(loc.midX, loc.midY);
 };
 /**
  * Taps control in browser.
  *
  * @async
  * @method
+ * @arg {object} [opts] - Options.
+ * @arg {boolean} [opts.now=false] - Make it immediately.
+ * @arg {?number} [opts.timeout] - Time to wait for element visibility, sec.
+ * @arg {boolean} [opts.scroll=true] - Scroll to element.
+ * @return {Promise}
  */
 Element.prototype.tap = Element.prototype.click;
 /**
@@ -267,16 +325,25 @@ Element.prototype.tap = Element.prototype.click;
  *
  * @async
  * @method
+ * @arg {object} [opts] - Options.
+ * @arg {boolean} [opts.now=false] - Make it immediately.
+ * @arg {?number} [opts.timeout] - Time to wait for element visibility, sec.
  * @return {Promise&lt;boolean>} `true` if control is selected, `false` otherwise.
  */
-Element.prototype.isSelected = function () {
-    return this._getDriver().isSelected(this.selector).then(result => {
-        if (result) return true;
+Element.prototype.isSelected = async function (opts) {
 
-        return this._getDriver().getAttribute(this.selector, "class").then(result => {
-            return result.includes("selected");
-        });
-    });
+    opts = U.defVal(opts, {});
+    var now = U.defVal(opts.now, false);
+
+    if (!now) {
+        await this.waitForVisible(opts.timeout);
+    };
+
+    var result = await this._getDriver().isSelected(this.selector);
+    if (result) return true;
+
+    result = await this._getDriver().getAttribute(this.selector, "class");
+    return result.includes("selected");
 };
 /**
  * Defines whether control is exist or no.
@@ -295,7 +362,7 @@ Element.prototype.isExist = function () {
  * @async
  * @method
  * @arg {number} [timeout] - Timeout to wait, sec.
- * @return {Promise&lt;void>}
+ * @return {Promise}
  * @throws {TimeoutError} If control doesn't exist after timeout.
  */
 Element.prototype.waitForExist = function (timeout) {
@@ -312,7 +379,7 @@ Element.prototype.waitForExist = function (timeout) {
  * @async
  * @method
  * @arg {number} [timeout] - Timeout to wait, sec.
- * @return {Promise&lt;void>}
+ * @return {Promise}
  * @throws {TimeoutError} If control is still exist after timeout.
  */
 Element.prototype.waitForNonExist = function (timeout) {
@@ -341,7 +408,7 @@ Element.prototype.isVisible = function () {
  * @async
  * @method
  * @arg {number} [timeout] - Timeout to wait, sec.
- * @return {Promise&lt;void>}
+ * @return {Promise}
  * @throws {TimeoutError} If control isn't visible after timeout.
  */
 Element.prototype.waitForVisible = function (timeout) {
@@ -359,7 +426,7 @@ Element.prototype.waitForVisible = function (timeout) {
  * @async
  * @method
  * @arg {number} [timeout] - Timeout to wait, sec.
- * @return {Promise&lt;void>}
+ * @return {Promise}
  * @throws {TimeoutError} If control is still visible after timeout.
  */
 Element.prototype.waitForInvisible = function (timeout) {
@@ -417,7 +484,7 @@ module.exports = Element;
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2018-04-09T19:22:21+03:00
+		on 2018-04-27T23:44:37+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
