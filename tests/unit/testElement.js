@@ -64,7 +64,7 @@ scope("UI element", () => {
     test(".getText()", () => {
 
         chunk("gets element text", async () => {
-            expect(await el.getText()).to.be.equal("text");
+            expect(await el.getText({ now: true })).to.be.equal("text");
             expect(wd.getText.calledOnce).to.be.true;
             expect(wd.getText.args[0][0]).to.be.equal(el.selector);
         });
@@ -73,7 +73,7 @@ scope("UI element", () => {
             wd.getText = sinon.spy(() => Promise.resolve());
             wd.getAttribute = sinon.spy(() => Promise.resolve(" value "));
 
-            expect(await el.getText()).to.be.equal("value");
+            expect(await el.getText({ now: true })).to.be.equal("value");
 
             expect(wd.getText.calledOnce).to.be.true;
             expect(wd.getText.args[0][0]).to.be.equal(el.selector);
@@ -91,7 +91,7 @@ scope("UI element", () => {
                 return p;
             });
 
-            expect(await el.getText()).to.be.equal("innerHTML");
+            expect(await el.getText({ now: true })).to.be.equal("innerHTML");
 
             expect(wd.getText.calledOnce).to.be.true;
             expect(wd.getText.args[0][0]).to.be.equal(el.selector);
@@ -106,7 +106,7 @@ scope("UI element", () => {
             wd.getText = sinon.spy(() => Promise.resolve());
             wd.getAttribute = sinon.spy(() => Promise.resolve());
 
-            expect(await el.getText()).to.be.null;
+            expect(await el.getText({ now: true })).to.be.null;
 
             expect(wd.getText.calledOnce).to.be.true;
             expect(wd.getText.args[0][0]).to.be.equal(el.selector);
@@ -120,7 +120,7 @@ scope("UI element", () => {
 
     test(".setText()", () => {
         chunk("sets text", async () => {
-            await el.setText("some text");
+            await el.setText("some text", { now: true });
             expect(wd.setValue.calledOnce).to.be.true;
             expect(wd.setValue.args[0][0]).to.be.equal(el.selector);
             expect(wd.setValue.args[0][1]).to.be.equal("some text");
@@ -140,7 +140,7 @@ scope("UI element", () => {
 
     test(".scrollIntoView()", () => {
         chunk("scrolls to view", async () => {
-            await el.scrollIntoView();
+            await el.scrollIntoView({ now: true });
             expect(wd.execute.calledOnce).to.be.true;
         });
     });
@@ -153,8 +153,7 @@ scope("UI element", () => {
         });
 
         chunk("clicks", async () => {
-            await el.click();
-            expect(el.waitForVisible.calledOnce).to.be.true;
+            await el.click({ now: true });
             expect(el.scrollIntoView.calledOnce).to.be.true;
             expect(wd.click.calledOnce).to.be.true;
             expect(wd.click.args[0][0]).to.be.equal(el.selector);
@@ -189,14 +188,14 @@ scope("UI element", () => {
     test(".isSelected()", () => {
         chunk("by property", async () => {
             wd.isSelected = sinon.spy(() => Promise.resolve(true));
-            expect(await el.isSelected()).to.be.true;
+            expect(await el.isSelected({ now: true })).to.be.true;
             expect(wd.isSelected.calledOnce).to.be.true;
         });
 
         chunk("by attribute", async () => {
             wd.isSelected = sinon.spy(() => Promise.resolve(false));
             wd.getAttribute = sinon.spy(() => Promise.resolve("selected"));
-            expect(await el.isSelected()).to.be.true;
+            expect(await el.isSelected({ now: true })).to.be.true;
             expect(wd.isSelected.calledOnce).to.be.true;
             expect(wd.getAttribute.calledOnce).to.be.true;
             expect(wd.getAttribute.args[0]).to.have.members([el.selector, "class"]);

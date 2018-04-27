@@ -35,11 +35,11 @@
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "glace-core": "^1.4.8",
+    "glace-core": "^1.5.2",
     "ink-docstrap": "^1.3.0",
     "jsdoc": "^3.5.5",
     "jsdoc-strip-async-await": "^0.1.0",
-    "nyc": "^11.6.0",
+    "nyc": "^11.7.1",
     "pre-commit": "^1.2.2"
   },
   "files": [
@@ -47,10 +47,10 @@
   ],
   "dependencies": {
     "chai": "^4.1.2",
-    "glace-utils": "^1.2.0",
-    "lodash": "^4.17.5",
+    "glace-utils": "^1.2.4",
+    "lodash": "^4.17.10",
     "logfmt": "^1.2.0",
-    "selenium-standalone": "^6.13.0",
+    "selenium-standalone": "^6.14.0",
     "weak": "^1.0.1",
     "webdriverio": "^4.12.0"
   }
