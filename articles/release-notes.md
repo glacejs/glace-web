@@ -1,3 +1,7 @@
+### v1.2.0
+
+- [Started](https://github.com/glacejs/glace-web/commit/b5fd3017a0385f91a1c98015407307444730285a) to wait for element visibility before action.
+
 ### v1.1.9
 
 - [Decomposed](https://github.com/glacejs/glace-web/commit/36775babf7f39ef6703ed11958c30a647b48f855) chrome options.
