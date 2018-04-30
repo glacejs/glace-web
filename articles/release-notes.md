@@ -1,3 +1,7 @@
+### v1.2.1
+
+- [Fixed](https://github.com/glacejs/glace-web/commit/ebab90c6c69bd4b4e70354c2ef28a0df582dfac8) registered pages default value.
+
 ### v1.2.0
 
 - [Started](https://github.com/glacejs/glace-web/commit/b5fd3017a0385f91a1c98015407307444730285a) to wait for element visibility before action.
