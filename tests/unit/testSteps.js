@@ -196,4 +196,16 @@ scope("Steps", () => {
                 .and.to.include("proxy-bypass-list=");
         });
     });
+
+    test("._pages()", () => {
+        beforeChunk(() => {
+            ctx._pages = Steps._pages;
+        });
+
+        chunk(() => {
+            expect(ctx._pages()).to.be.eql({});
+            ctx._pages()["a"] = 1;
+            expect(ctx._pages().a).to.be.equal(1);
+        });
+    });
 });
