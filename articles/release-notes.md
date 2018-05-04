@@ -1,3 +1,7 @@
+### v1.2.2
+
+- [Added](https://github.com/glacejs/glace-web/commit/e7c1e98d034932b19bc5d43d0e3595e916c6b161) [allure](https://docs.qameta.io/allure/) steps.
+
 ### v1.2.1
 
 - [Fixed](https://github.com/glacejs/glace-web/commit/ebab90c6c69bd4b4e70354c2ef28a0df582dfac8) registered pages default value.
