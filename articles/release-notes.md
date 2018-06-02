@@ -1,3 +1,7 @@
+### v1.2.3
+
+- Update dependencies.
+
 ### v1.2.2
 
 - [Added](https://github.com/glacejs/glace-web/commit/e7c1e98d034932b19bc5d43d0e3595e916c6b161) [allure](https://docs.qameta.io/allure/) steps.
