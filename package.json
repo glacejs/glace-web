@@ -1,6 +1,6 @@
 {
   "name": "glace-web",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "GlaceJS Web plugin",
   "main": "lib/index.js",
   "scripts": {
