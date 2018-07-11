@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "glace-core": "^1.6.2",
+    "glace-core": "^1.6.4",
     "ink-docstrap": "^1.3.0",
     "jsdoc": "^3.5.5",
     "jsdoc-strip-async-await": "^0.1.0",
@@ -48,11 +48,11 @@
   ],
   "dependencies": {
     "chai": "^4.1.2",
-    "glace-utils": "^1.2.7",
+    "glace-utils": "^1.2.8",
     "lodash": "^4.17.10",
     "logfmt": "^1.2.1",
-    "selenium-standalone": "^6.15.0",
+    "selenium-standalone": "^6.15.1",
     "weak": "^1.0.1",
-    "webdriverio": "^4.12.0"
+    "webdriverio": "^4.13.1"
   }
 }
