@@ -1,3 +1,7 @@
+### v1.2.5
+
+- [Fixed](https://github.com/glacejs/glace-web/commit/d4fbfc85193fc06d8c088e25b994458766b41dac) bug with incorrect URL in error message.
+
 ### v1.2.4
 
 - Migrated to new `glace-core`.
