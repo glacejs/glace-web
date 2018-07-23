@@ -18,8 +18,7 @@ Steps.register({
      */
     searchPom: async function (text) {
         await this.openPage(indexPage.name);
-        await indexPage.searchField.setText(text);
-        await indexPage.searchButton.click();
+        await indexPage.searchField.setText(text, { enter: true });
         await this.pause(1, "wait for result");
     },
     /**
