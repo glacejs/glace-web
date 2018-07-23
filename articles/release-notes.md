@@ -1,3 +1,7 @@
+### v1.2.6
+
+- [Added](https://github.com/glacejs/glace-web/commit/24c625896812ce252ad6325b9a82dfbec3c97d87) `Enter` sending after text in element optionally.
+
 ### v1.2.5
 
 - [Fixed](https://github.com/glacejs/glace-web/commit/d4fbfc85193fc06d8c088e25b994458766b41dac) bug with incorrect URL in error message.
