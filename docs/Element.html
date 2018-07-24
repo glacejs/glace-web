@@ -128,7 +128,7 @@
     
     <div class="description">
         <p>Creates a new instance of <code>Element</code>.</p>
-<p><code>Element</code> binds DOM control in browser context with virtual control in test.</p>
+<p><code>Element</code> binds DOM element in browser context with virtual element in test.</p>
     </div>
     
 
@@ -180,7 +180,7 @@
 
             
 
-            <td class="description last"><p>Control name.</p></td>
+            <td class="description last"><p>Element name.</p></td>
         </tr>
 
     
@@ -444,7 +444,7 @@
 
     
     <div class="description">
-        <p>Clicks control in browser.</p>
+        <p>Clicks element in browser.</p>
     </div>
     
 
@@ -740,6 +740,310 @@
     <dd>
         
 <span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="clone"><span class="type-signature">&lt;async> </span>clone( [opts])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Clones element with custom properties.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Clone options.</p>
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Element name.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>selector</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>CSS selector of DOM element.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>page</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Page.html">Page</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Page with element.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="pom_element.js.html">pom/element.js</a>,
+				 <a href="pom_element.js.html#sunlight-1-line-348">line 348</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Cloned element.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Element.html">Element</a></span>
 
 
 
@@ -1160,7 +1464,7 @@
 
     
     <div class="description">
-        <p>Defines whether control is exist or no.</p>
+        <p>Defines whether element is exist or no.</p>
     </div>
     
 
@@ -1236,7 +1540,7 @@
     
             
 <div class="param-desc">
-    <p><code>true</code> if control is exist, <code>false</code> otherwise.</p>
+    <p><code>true</code> if element is exist, <code>false</code> otherwise.</p>
 </div>
 
 
@@ -1272,7 +1576,7 @@
 
     
     <div class="description">
-        <p>Defines whether control is selected or no.</p>
+        <p>Defines whether element is selected or no.</p>
     </div>
     
 
@@ -1520,7 +1824,7 @@
     
             
 <div class="param-desc">
-    <p><code>true</code> if control is selected, <code>false</code> otherwise.</p>
+    <p><code>true</code> if element is selected, <code>false</code> otherwise.</p>
 </div>
 
 
@@ -1556,7 +1860,7 @@
 
     
     <div class="description">
-        <p>Defines whether control is visible or no.</p>
+        <p>Defines whether element is visible or no.</p>
     </div>
     
 
@@ -1632,7 +1936,7 @@
     
             
 <div class="param-desc">
-    <p><code>true</code> if control is visible, <code>false</code> otherwise.</p>
+    <p><code>true</code> if element is visible, <code>false</code> otherwise.</p>
 </div>
 
 
@@ -1668,7 +1972,7 @@
 
     
     <div class="description">
-        <p>Gets DOM control location with attributes:
+        <p>Gets DOM element location with attributes:
  <code>x</code>, <code>y</code>, <code>midX</code>, <code>midY</code>, <code>width</code>, <code>height</code>.</p>
     </div>
     
@@ -1745,7 +2049,7 @@
     
             
 <div class="param-desc">
-    <p>Location of control.</p>
+    <p>Location of element.</p>
 </div>
 
 
@@ -2101,7 +2405,7 @@
 
     
     <div class="description">
-        <p>Scrolls control into browser viewport.</p>
+        <p>Scrolls element into browser viewport.</p>
     </div>
     
 
@@ -2773,7 +3077,7 @@
 
     
     <div class="description">
-        <p>Taps control in browser.</p>
+        <p>Taps element in browser.</p>
     </div>
     
 
@@ -3093,7 +3397,7 @@
 
     
     <div class="description">
-        <p>Waits for control is exist.</p>
+        <p>Waits for element is exist.</p>
     </div>
     
 
@@ -3232,7 +3536,7 @@
 <dl>
     <dt>
         <div class="param-desc">
-        <p>If control doesn't exist after timeout.</p>
+        <p>If element doesn't exist after timeout.</p>
         </div>
     </dt>
     <dt>
@@ -3291,7 +3595,7 @@
 
     
     <div class="description">
-        <p>Waits for control is invisible.</p>
+        <p>Waits for element is invisible.</p>
     </div>
     
 
@@ -3430,7 +3734,7 @@
 <dl>
     <dt>
         <div class="param-desc">
-        <p>If control is still visible after timeout.</p>
+        <p>If element is still visible after timeout.</p>
         </div>
     </dt>
     <dt>
@@ -3489,7 +3793,7 @@
 
     
     <div class="description">
-        <p>Waits for control isn't exist.</p>
+        <p>Waits for element isn't exist.</p>
     </div>
     
 
@@ -3628,7 +3932,7 @@
 <dl>
     <dt>
         <div class="param-desc">
-        <p>If control is still exist after timeout.</p>
+        <p>If element is still exist after timeout.</p>
         </div>
     </dt>
     <dt>
@@ -3687,7 +3991,7 @@
 
     
     <div class="description">
-        <p>Waits for control is visible.</p>
+        <p>Waits for element is visible.</p>
     </div>
     
 
@@ -3826,7 +4130,7 @@
 <dl>
     <dt>
         <div class="param-desc">
-        <p>If control isn't visible after timeout.</p>
+        <p>If element isn't visible after timeout.</p>
         </div>
     </dt>
     <dt>
@@ -3927,7 +4231,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2018-07-24T00:41:18+03:00
+		on 2018-07-24T07:51:38+03:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
