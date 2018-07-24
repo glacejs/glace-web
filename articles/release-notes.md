@@ -1,3 +1,7 @@
+### v1.2.7
+
+- [Added](https://github.com/glacejs/glace-web/commit/1b205f9004944c63f65a6a63706b357f820c3bcf) ability to clone web element.
+
 ### v1.2.6
 
 - [Added](https://github.com/glacejs/glace-web/commit/24c625896812ce252ad6325b9a82dfbec3c97d87) `Enter` sending after text in element optionally.
