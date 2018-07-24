@@ -1,3 +1,7 @@
+### v1.2.8
+
+- [Extended](https://github.com/glacejs/glace-web/commit/8444e5043154ac8b4e6260890dbb695a85c1e68f) web element functionality.
+
 ### v1.2.7
 
 - [Added](https://github.com/glacejs/glace-web/commit/1b205f9004944c63f65a6a63706b357f820c3bcf) ability to clone web element.
