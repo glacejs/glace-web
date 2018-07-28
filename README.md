@@ -57,4 +57,9 @@ If plugin is used as a part of `GlaceJS` it will be loaded automatically.
 
 ## Test examples
 
-See [integration tests](https://github.com/glacejs/glace-js/blob/master/tests/integration/testWeb.js) in order to explore examples.
+See [integration tests](https://github.com/glacejs/glace-js/blob/master/tests/e2e/testWeb.js) in order to explore examples.
+
+## Tests and quality
+
+- Project tests report is <a href="allure-report/index.html" target="_blank">here</a>
+- Code coverage report is <a href="tests-cover/lcov-report/index.html" target="_blank">here</a>
