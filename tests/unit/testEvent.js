@@ -2,7 +2,7 @@
 
 var PointerEvents = require("../../lib/pom/event");
 
-scope("Pointer Events", () => {
+suite("Pointer Events", () => {
     var pe, page, exec;
 
     beforeChunk(() => {

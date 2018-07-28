@@ -9,6 +9,8 @@ module.exports = {
         "chunk": true,
         "test": true,
         "sinon": true,
+        "suite": true,
+        "$": true,
         "CONF": true,
         "beforeChunk": true,
         "afterChunk": true,

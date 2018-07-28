@@ -36,42 +36,47 @@ Steps.register({
     },
 });
 
-CONF.web.url = "https://yandex.ru";
-
-scope("Web", null, [fxKillWebdriver, fxSelenium, fxWebdriver], () => {
+suite("e2e web tests", null, [fxKillWebdriver, fxSelenium, fxWebdriver], () => {
     
     before(() => {
-        SS.registerPages(indexPage);
+        $.registerPages(indexPage);
     });
 
     test("Browser viewport is set", () => {
     
-        afterChunk(async () => {
+        beforeChunk(() => {
             CONF.web.width = null;
             CONF.web.height = null;
-            await SS.closeBrowser();
+        });
+
+        afterChunk(async () => {
+            await $.closeBrowser();
         });
     
         chunk("explicitly", async () => {
-            await SS.launchBrowser();
-            await SS.setViewport({ width: 700, height: 500 });
+            await $.launchBrowser();
+            await $.setViewport({ width: 700, height: 500 });
         });
 
         chunk("via config", async () => {
             CONF.web.width = 800;
             CONF.web.height = 600;
-            await SS.launchBrowser();
+            await $.launchBrowser();
         });
     });
 
     test("Page Object", null, [fxBrowser], () => {
 
+        before(() => {
+            $.webUrl = "https://yandex.ru";
+        });
+
         chunk("manages UI elements via Glace POM", async () => {
-            await SS.searchPom("nodejs");
+            await $.searchPom("nodejs");
         });
 
         chunk("manages UI elements via WebdriverIO", async () => {
-            await SS.searchWdio("nodejs");
+            await $.searchWdio("nodejs");
         });
     });
 });

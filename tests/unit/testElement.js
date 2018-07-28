@@ -2,7 +2,7 @@
 
 var Element = require("../../lib/pom/element");
 
-scope("UI element", () => {
+suite("UI element", () => {
     var el, page, wd;
     
     beforeChunk(() => {

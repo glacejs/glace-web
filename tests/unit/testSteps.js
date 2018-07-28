@@ -4,7 +4,7 @@ var CONF = require("../../lib/config");
 var Steps = rewire("../../lib/steps");
 var BrowserSteps = rewire("../../lib/steps/browser");
 
-scope("Steps", () => {
+suite("Steps", () => {
     var ctx;
 
     beforeChunk(() => {

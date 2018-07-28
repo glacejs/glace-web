@@ -2,7 +2,7 @@
 
 var Page = require("../../lib").Page;
 
-scope("Page", () => {
+suite("Page", () => {
     var page;
 
     beforeChunk(() => {
