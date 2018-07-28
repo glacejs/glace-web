@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">46.43% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>13/28</span>
+        <span class='fraction'>28/28</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,21 +30,21 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">38.46% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>5/13</span>
+        <span class='fraction'>13/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">48.15% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>13/27</span>
+        <span class='fraction'>27/27</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -105,45 +105,45 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,49 +152,49 @@
 &nbsp;
 var PointerEvents = require("../../lib/pom/event");
 &nbsp;
-scope("Pointer Events", () =&gt; {
+suite("Pointer Events", () =&gt; {
     var pe, page, exec;
 &nbsp;
-    beforeChunk(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        exec = sinon.spy();</span>
-<span class="cstat-no" title="statement not covered" >        page = { getDriver: <span class="fstat-no" title="function not covered" >()</span> =&gt; { <span class="cstat-no" title="statement not covered" >return { execute: exec }; </span>} };</span>
-<span class="cstat-no" title="statement not covered" >        pe = new PointerEvents("#id", page);</span>
+    beforeChunk(() =&gt; {
+        exec = sinon.spy();
+        page = { getDriver: () =&gt; { return { execute: exec }; } };
+        pe = new PointerEvents("#id", page);
     });
 &nbsp;
     test("events instance", () =&gt; {
 &nbsp;
-        chunk("has correct selector", <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >            expect(pe._selector).to.be.equal("#id");</span>
+        chunk("has correct selector", () =&gt; {
+            expect(pe._selector).to.be.equal("#id");
         });
 &nbsp;
-        chunk("has correct page", <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >            expect(pe._page.getDriver).to.be.equal(page.getDriver);</span>
+        chunk("has correct page", () =&gt; {
+            expect(pe._page.getDriver).to.be.equal(page.getDriver);
         });
 &nbsp;
-        chunk("has correct element cmd", <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >            expect(pe._elCmd).to.include(pe._selector);</span>
+        chunk("has correct element cmd", () =&gt; {
+            expect(pe._elCmd).to.include(pe._selector);
         });
 &nbsp;
-        chunk("doesn't have webdriver", <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >            expect(pe._webdriver).to.not.exist;</span>
+        chunk("doesn't have webdriver", () =&gt; {
+            expect(pe._webdriver).to.not.exist;
         });
     });
 &nbsp;
     test("events._getDriver()", () =&gt; {
-        chunk("gets webdriver", <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >            expect(pe._getDriver().execute).to.be.equal(exec);</span>
+        chunk("gets webdriver", () =&gt; {
+            expect(pe._getDriver().execute).to.be.equal(exec);
         });
     });
 &nbsp;
     ["over", "enter", "down", "up", "move", "cancel", "out", "leave"].forEach(event =&gt; {
         test(`.${event}()`, () =&gt; {
-            chunk("to selector coords", <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
-<span class="cstat-no" title="statement not covered" >                await pe[event](111, 222);</span>
-<span class="cstat-no" title="statement not covered" >                expect(exec).to.be.calledOnce;</span>
-<span class="cstat-no" title="statement not covered" >                expect(exec.args[0][0]).to.include("isPrimary: true");</span>
-<span class="cstat-no" title="statement not covered" >                expect(exec.args[0][0]).to.include(pe._elCmd);</span>
-<span class="cstat-no" title="statement not covered" >                expect(exec.args[0][0]).to.include(111);</span>
-<span class="cstat-no" title="statement not covered" >                expect(exec.args[0][0]).to.include(222);</span>
+            chunk("to selector coords", async () =&gt; {
+                await pe[event](111, 222);
+                expect(exec).to.be.calledOnce;
+                expect(exec.args[0][0]).to.include("isPrimary: true");
+                expect(exec.args[0][0]).to.include(pe._elCmd);
+                expect(exec.args[0][0]).to.include(111);
+                expect(exec.args[0][0]).to.include(222);
             });
         });
     });
@@ -205,7 +205,7 @@ scope("Pointer Events", () =&gt; {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jul 28 2018 11:07:04 GMT+0300 (EEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jul 28 2018 11:30:54 GMT+0300 (EEST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">7.93% </span>
+        <span class="strong">17.07% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>13/164</span>
+        <span class='fraction'>28/164</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">14.29% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/49</span>
+        <span class='fraction'>7/49</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">9.52% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/21</span>
+        <span class='fraction'>2/21</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">8.33% </span>
+        <span class="strong">16.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>13/156</span>
+        <span class='fraction'>26/156</span>
       </div>
     </div>
     <p class="quiet">
@@ -762,27 +762,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -984,11 +984,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">27x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
 /**
@@ -1231,30 +1231,30 @@ var BrowserSteps = {
      * @protected
      * @arg {array} [chromeOpts=[]] - List of chrome options.
      */
-    _setChromeOpts: <span class="fstat-no" title="function not covered" >fu</span>nction (chromeOpts) {
+    _setChromeOpts: function (chromeOpts) {
         var opt;
         /* store origin chrome options, because then webdriver options will be overridden */
-<span class="cstat-no" title="statement not covered" >        defChromeOpts = U.defVal(defChromeOpts,</span>
+        defChromeOpts = U.defVal(defChromeOpts,
             this.webdriver.desiredCapabilities.chromeOptions.args, []);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        chromeOpts = _.clone(U.defVal(chromeOpts, []));</span>
+        chromeOpts = _.clone(U.defVal(chromeOpts, []));
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (this.globalProxy &amp;&amp; this.globalProxy.isRunning) {</span>
-            var proxyOptions = <span class="cstat-no" title="statement not covered" >[</span>
+        if (this.globalProxy &amp;&amp; this.globalProxy.isRunning) {
+            var proxyOptions = [
                 "ignore-certificate-errors",
                 `proxy-server=${U.hostname}:${CONF.proxy.globalPort}`,
                 `proxy-bypass-list=localhost,127.0.0.1,${U.hostname}`,
             ];
-<span class="cstat-no" title="statement not covered" >            for (opt of proxyOptions) {</span>
-<span class="cstat-no" title="statement not covered" >                if (!isOptPresent(opt, chromeOpts)) <span class="cstat-no" title="statement not covered" >chromeOpts.push(opt);</span></span>
+            for (opt of proxyOptions) {
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (!isOptPresent(opt, chromeOpts)) chromeOpts.push(opt);
             };
         };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        for (opt of defChromeOpts) {</span>
-<span class="cstat-no" title="statement not covered" >            if (!isOptPresent(opt, chromeOpts)) <span class="cstat-no" title="statement not covered" >chromeOpts.push(opt);</span></span>
+        for (opt of defChromeOpts) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (!isOptPresent(opt, chromeOpts)) chromeOpts.push(opt);
         };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        this.webdriver.desiredCapabilities.chromeOptions.args = chromeOpts;</span>
+        this.webdriver.desiredCapabilities.chromeOptions.args = chromeOpts;
     },
 &nbsp;
     setViewport: <span class="fstat-no" title="function not covered" >as</span>ync function (opts) {
@@ -1455,12 +1455,12 @@ module.exports = BrowserSteps;
  * @ignore
  * @function
  */
-var isOptPresent = <span class="fstat-no" title="function not covered" >(o</span>pt, opts) =&gt; {
-    var optStart = <span class="cstat-no" title="statement not covered" >opt.split("=")[0];</span>
-<span class="cstat-no" title="statement not covered" >    for (var o of opts) {</span>
-<span class="cstat-no" title="statement not covered" >        if (o.split("=")[0] === optStart) <span class="cstat-no" title="statement not covered" >return true;</span></span>
+var isOptPresent = (opt, opts) =&gt; {
+    var optStart = opt.split("=")[0];
+    for (var o of opts) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (o.split("=")[0] === optStart) <span class="cstat-no" title="statement not covered" >return true;</span>
     };
-<span class="cstat-no" title="statement not covered" >    return false;</span>
+    return false;
 };
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -1468,7 +1468,7 @@ var isOptPresent = <span class="fstat-no" title="function not covered" >(o</span
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jul 28 2018 11:07:04 GMT+0300 (EEST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jul 28 2018 11:30:54 GMT+0300 (EEST)
 </div>
 </div>
 <script src="../../prettify.js"></script>

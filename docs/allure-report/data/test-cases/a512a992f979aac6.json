@@ -1,0 +1,212 @@
+{
+  "uid" : "a512a992f979aac6",
+  "name" : "Browser viewport is set",
+  "fullName" : "e2e web tests.Browser viewport is set",
+  "historyId" : "9d1a92ac92a43f05de5c994b7f41ee56",
+  "time" : {
+    "start" : 1532766634458,
+    "stop" : 1532766642493,
+    "duration" : 8035
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "explicitly",
+      "time" : {
+        "start" : 1532766634459,
+        "stop" : 1532766637791,
+        "duration" : 3332
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Launch browser via selenium",
+        "time" : {
+          "start" : 1532766634460,
+          "stop" : 1532766637348,
+          "duration" : 2888
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Set browser viewport to [width=700, height=500]",
+        "time" : {
+          "start" : 1532766637348,
+          "stop" : 1532766637791,
+          "duration" : 443
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Close browser",
+      "time" : {
+        "start" : 1532766637792,
+        "stop" : 1532766638904,
+        "duration" : 1112
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Sleep 1 sec because webdriver process will be stopped",
+        "time" : {
+          "start" : 1532766637901,
+          "stop" : 1532766638902,
+          "duration" : 1001
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "via config",
+      "time" : {
+        "start" : 1532766638904,
+        "stop" : 1532766641426,
+        "duration" : 2522
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Launch browser via selenium",
+        "time" : {
+          "start" : 1532766638905,
+          "stop" : 1532766641424,
+          "duration" : 2519
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Set browser viewport to [width=800, height=600]",
+          "time" : {
+            "start" : 1532766640993,
+            "stop" : 1532766641424,
+            "duration" : 431
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Close browser",
+      "time" : {
+        "start" : 1532766641426,
+        "stop" : 1532766642493,
+        "duration" : 1067
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Sleep 1 sec because webdriver process will be stopped",
+        "time" : {
+          "start" : 1532766641491,
+          "stop" : 1532766642492,
+          "duration" : 1001
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 10,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "e2e web tests"
+  }, {
+    "name" : "testClass",
+    "value" : "e2e web tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "Browser viewport is set"
+  }, {
+    "name" : "package",
+    "value" : "e2e web tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a512a992f979aac6.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ ]
+}
