@@ -1,0 +1,77 @@
+{
+  "uid" : "cc99e70a40bb044c",
+  "name" : ".removeElements()",
+  "fullName" : "Page..removeElements()",
+  "historyId" : "c31c124ca1d8728762fb7b3af542890d",
+  "time" : {
+    "start" : 1532802594790,
+    "stop" : 1532802594792,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "removes elements",
+      "time" : {
+        "start" : 1532802594791,
+        "stop" : 1532802594792,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Page"
+  }, {
+    "name" : "testClass",
+    "value" : "Page"
+  }, {
+    "name" : "testMethod",
+    "value" : ".removeElements()"
+  }, {
+    "name" : "package",
+    "value" : "Page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cc99e70a40bb044c.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ ]
+}
