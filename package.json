@@ -17,6 +17,11 @@
     "test:commit": "./tests/run tests/unit",
     "test:e2e": "./tests/run tests/e2e"
   },
+  "nyc": {
+    "exclude": [
+      "tests"
+    ]
+  },
   "pre-commit": [
     "lint",
     "test:commit"
