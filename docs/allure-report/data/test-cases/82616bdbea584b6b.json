@@ -1,0 +1,77 @@
+{
+  "uid" : "82616bdbea584b6b",
+  "name" : ".setDriver()",
+  "fullName" : "Page..setDriver()",
+  "historyId" : "5422071449db3378aa2606e7d46e7755",
+  "time" : {
+    "start" : 1533838582107,
+    "stop" : 1533838582108,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "sets webdriver",
+      "time" : {
+        "start" : 1533838582108,
+        "stop" : 1533838582108,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Page"
+  }, {
+    "name" : "testClass",
+    "value" : "Page"
+  }, {
+    "name" : "testMethod",
+    "value" : ".setDriver()"
+  }, {
+    "name" : "package",
+    "value" : "Page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "82616bdbea584b6b.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ ]
+}

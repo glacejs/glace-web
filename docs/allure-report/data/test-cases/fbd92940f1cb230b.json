@@ -1,0 +1,257 @@
+{
+  "uid" : "fbd92940f1cb230b",
+  "name" : ".launchBrowser()",
+  "fullName" : "Steps..launchBrowser()",
+  "historyId" : "120b76b8f32e399dbde2741617a728",
+  "time" : {
+    "start" : 1533838582132,
+    "stop" : 1533838582146,
+    "duration" : 14
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "skipped if browser already launched",
+      "time" : {
+        "start" : 1533838582133,
+        "stop" : 1533838582135,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "throw error if web driver isn't activated",
+      "time" : {
+        "start" : 1533838582136,
+        "stop" : 1533838582138,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Launch browser via selenium",
+        "time" : {
+          "start" : 1533838582137,
+          "stop" : 1533838582138,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "just launches browser",
+      "time" : {
+        "start" : 1533838582138,
+        "stop" : 1533838582140,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Launch browser via selenium",
+        "time" : {
+          "start" : 1533838582139,
+          "stop" : 1533838582139,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "sets chrome options if browser chrome",
+      "time" : {
+        "start" : 1533838582140,
+        "stop" : 1533838582141,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Launch browser via selenium",
+        "time" : {
+          "start" : 1533838582140,
+          "stop" : 1533838582141,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "check that browser is launched",
+      "time" : {
+        "start" : 1533838582141,
+        "stop" : 1533838582143,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Launch browser via selenium",
+        "time" : {
+          "start" : 1533838582142,
+          "stop" : 1533838582142,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "throws error if browser isn't launched",
+      "time" : {
+        "start" : 1533838582143,
+        "stop" : 1533838582144,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Launch browser via selenium",
+        "time" : {
+          "start" : 1533838582144,
+          "stop" : 1533838582144,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "sets viewport if size is configured",
+      "time" : {
+        "start" : 1533838582144,
+        "stop" : 1533838582145,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Launch browser via selenium",
+        "time" : {
+          "start" : 1533838582145,
+          "stop" : 1533838582145,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 13,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Steps"
+  }, {
+    "name" : "testClass",
+    "value" : "Steps"
+  }, {
+    "name" : "testMethod",
+    "value" : ".launchBrowser()"
+  }, {
+    "name" : "package",
+    "value" : "Steps"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fbd92940f1cb230b.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ ]
+}
