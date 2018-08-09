@@ -187,8 +187,7 @@ suite("Steps", () => {
         });
 
         chunk("sets proxy chrome options", () => {
-            CONF.proxy = { globalPort: 8888 };
-            ctx.globalProxy = { isRunning: true };
+            ctx.globalProxy = { isRunning: true, getPort: () => 8888 };
             ctx._setChromeOpts();
             expect(ctx.webdriver.desiredCapabilities.chromeOptions.args.join(" "))
                 .to.include("ignore-certificate-errors")
