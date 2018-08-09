@@ -1,3 +1,7 @@
+### v1.2.9
+
+- [Get](https://github.com/glacejs/glace-web/commit/6b27a8a152b28230221ba7f1251dd91ff3d2fb9e) global proxy port from proxy instance on browser start.
+
 ### v1.2.8
 
 - [Extended](https://github.com/glacejs/glace-web/commit/8444e5043154ac8b4e6260890dbb695a85c1e68f) web element functionality.
