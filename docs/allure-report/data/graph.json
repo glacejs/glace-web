@@ -1,410 +1,410 @@
 [ {
-  "uid" : "db040cc632020347",
-  "name" : ".waitForNonExist()",
-  "time" : {
-    "start" : 1533838582034,
-    "stop" : 1533838582037,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d0f3bd98f5a371c",
-  "name" : ".leave()",
-  "time" : {
-    "start" : 1533838582086,
-    "stop" : 1533838582088,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7d76568fd73a61d0",
-  "name" : "._setChromeOpts()",
-  "time" : {
-    "start" : 1533838582156,
-    "stop" : 1533838582167,
-    "duration" : 11
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "653a0c2d1fae132d",
-  "name" : ".move()",
-  "time" : {
-    "start" : 1533838582079,
-    "stop" : 1533838582081,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f9c0a264f6d29759",
-  "name" : ".cancel()",
-  "time" : {
-    "start" : 1533838582082,
-    "stop" : 1533838582084,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "1a1fcb6cf3a6d149",
-  "name" : "events._getDriver()",
-  "time" : {
-    "start" : 1533838582066,
-    "stop" : 1533838582068,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "434497e7153745e7",
-  "name" : ".pClick()",
-  "time" : {
-    "start" : 1533838582015,
-    "stop" : 1533838582022,
-    "duration" : 7
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6dca8204c68122c8",
-  "name" : ".getElement()",
-  "time" : {
-    "start" : 1533838581978,
-    "stop" : 1533838581980,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "59f7b96800c74acd",
-  "name" : ".getDriver()",
-  "time" : {
-    "start" : 1533838582108,
-    "stop" : 1533838582110,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c78f97cd0cb7c95d",
-  "name" : "._getDriver()",
-  "time" : {
-    "start" : 1533838581974,
-    "stop" : 1533838581977,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f7a41f4153453353",
-  "name" : "events instance",
-  "time" : {
-    "start" : 1533838582062,
-    "stop" : 1533838582066,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f19a1fb1aa882cec",
-  "name" : "Plugin lazy import",
-  "time" : {
-    "start" : 1533838582097,
-    "stop" : 1533838582099,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b41dd4100f7e7849",
-  "name" : "plugin help contains option",
-  "time" : {
-    "start" : 1533838582119,
-    "stop" : 1533838582122,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "33e79b7d92c8111f",
-  "name" : ".up()",
-  "time" : {
-    "start" : 1533838582077,
-    "stop" : 1533838582079,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3a6094e413e3dc38",
-  "name" : ".addElements()",
-  "time" : {
-    "start" : 1533838582111,
-    "stop" : 1533838582112,
-    "duration" : 1
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "49139efe5db04c9f",
-  "name" : ".isSelected()",
-  "time" : {
-    "start" : 1533838582022,
-    "stop" : 1533838582027,
-    "duration" : 5
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c153749da59470d2",
-  "name" : "._pages()",
-  "time" : {
-    "start" : 1533838582168,
-    "stop" : 1533838582170,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ceda195d30dacc23",
-  "name" : ".isVisible()",
-  "time" : {
-    "start" : 1533838582037,
-    "stop" : 1533838582039,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d00bd1ebc954c1b7",
-  "name" : ".setText()",
-  "time" : {
-    "start" : 1533838582001,
-    "stop" : 1533838582005,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "af298cac02246432",
-  "name" : "page instance",
-  "time" : {
-    "start" : 1533838582101,
-    "stop" : 1533838582107,
-    "duration" : 6
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3af89325ea52a222",
-  "name" : ".isExist()",
-  "time" : {
-    "start" : 1533838582028,
-    "stop" : 1533838582030,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c82c79d130a655ea",
-  "name" : ".waitForVisible()",
-  "time" : {
-    "start" : 1533838582039,
-    "stop" : 1533838582042,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f37f8d14fa0daaaf",
+  "uid" : "172da91512ef2827",
   "name" : ".enter()",
   "time" : {
-    "start" : 1533838582072,
-    "stop" : 1533838582074,
+    "start" : 1534185659084,
+    "stop" : 1534185659086,
     "duration" : 2
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "82616bdbea584b6b",
+  "uid" : "d79ed011c217775f",
+  "name" : ".move()",
+  "time" : {
+    "start" : 1534185659089,
+    "stop" : 1534185659090,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "14bd2cf963ad18bf",
+  "name" : ".leave()",
+  "time" : {
+    "start" : 1534185659094,
+    "stop" : 1534185659095,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "eb9ec5a9f5e116a",
+  "name" : ".over()",
+  "time" : {
+    "start" : 1534185659082,
+    "stop" : 1534185659084,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8ecbb77f1915ca53",
+  "name" : "._pages()",
+  "time" : {
+    "start" : 1534185659174,
+    "stop" : 1534185659176,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a0f2052db87b049",
+  "name" : ".waitForVisible()",
+  "time" : {
+    "start" : 1534185659062,
+    "stop" : 1534185659064,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b7c262e6d7f66a98",
+  "name" : "events._getDriver()",
+  "time" : {
+    "start" : 1534185659080,
+    "stop" : 1534185659082,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "43fc970095dc536f",
   "name" : ".setDriver()",
   "time" : {
-    "start" : 1533838582107,
-    "stop" : 1533838582108,
+    "start" : 1534185659113,
+    "stop" : 1534185659114,
     "duration" : 1
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "5ad66cadbd56d146",
-  "name" : "Browser viewport is set",
+  "uid" : "2d23f340c73cb7d",
+  "name" : ".isExist()",
   "time" : {
-    "start" : 1533838584526,
-    "stop" : 1533838595164,
-    "duration" : 10638
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "63b80d822edd5cea",
-  "name" : "Page Object",
-  "time" : {
-    "start" : 1533838595166,
-    "stop" : 1533838605374,
-    "duration" : 10208
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "33b2b2a2a6d45fa7",
-  "name" : ".down()",
-  "time" : {
-    "start" : 1533838582075,
-    "stop" : 1533838582077,
+    "start" : 1534185659052,
+    "stop" : 1534185659054,
     "duration" : 2
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "cf2af514b729e2f3",
+  "uid" : "9827f61ea95cf3a0",
+  "name" : "Plugin lazy import",
+  "time" : {
+    "start" : 1534185659101,
+    "stop" : 1534185659103,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "54c2369dc6a3acd",
+  "name" : ".isSelected()",
+  "time" : {
+    "start" : 1534185659047,
+    "stop" : 1534185659051,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d237cacb4f95fd85",
+  "name" : "config",
+  "time" : {
+    "start" : 1534185658981,
+    "stop" : 1534185658998,
+    "duration" : 17
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1d828c50f8d59c83",
   "name" : ".removeElements()",
   "time" : {
-    "start" : 1533838582113,
-    "stop" : 1533838582114,
+    "start" : 1534185659119,
+    "stop" : 1534185659120,
     "duration" : 1
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "70dfeb94e8d2ef21",
-  "name" : ".out()",
+  "uid" : "60cfb366a2ca6109",
+  "name" : ".location()",
   "time" : {
-    "start" : 1533838582084,
-    "stop" : 1533838582086,
+    "start" : 1534185659035,
+    "stop" : 1534185659037,
     "duration" : 2
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "f738127754ef3964",
-  "name" : ".activateWeb()",
+  "uid" : "11ce8aa628e941d7",
+  "name" : ".scrollIntoView()",
   "time" : {
-    "start" : 1533838582126,
-    "stop" : 1533838582131,
-    "duration" : 5
+    "start" : 1534185659037,
+    "stop" : 1534185659039,
+    "duration" : 2
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "f40e0b6978243719",
+  "uid" : "67049e6046fdc363",
   "name" : ".getText()",
   "time" : {
-    "start" : 1533838581981,
-    "stop" : 1533838582001,
-    "duration" : 20
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fbd92940f1cb230b",
-  "name" : ".launchBrowser()",
-  "time" : {
-    "start" : 1533838582132,
-    "stop" : 1533838582146,
-    "duration" : 14
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "2b47e2d9bb3e258",
-  "name" : ".waitForExist()",
-  "time" : {
-    "start" : 1533838582031,
-    "stop" : 1533838582034,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5af84ff263c9a29",
-  "name" : "element instance",
-  "time" : {
-    "start" : 1533838581965,
-    "stop" : 1533838581974,
+    "start" : 1534185659024,
+    "stop" : 1534185659033,
     "duration" : 9
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "1aedb31f6a42b986",
-  "name" : "config",
+  "uid" : "15f8101c130be1d2",
+  "name" : "page instance",
   "time" : {
-    "start" : 1533838581946,
-    "stop" : 1533838581957,
-    "duration" : 11
+    "start" : 1534185659106,
+    "stop" : 1534185659112,
+    "duration" : 6
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "7e6a032da99eaadc",
-  "name" : ".click()",
+  "uid" : "f8e3eecebeb47f00",
+  "name" : ".activateWeb()",
   "time" : {
-    "start" : 1533838582012,
-    "stop" : 1533838582015,
-    "duration" : 3
+    "start" : 1534185659133,
+    "stop" : 1534185659146,
+    "duration" : 13
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "530e23191e75b80c",
-  "name" : ".location()",
+  "uid" : "432861272efb8db5",
+  "name" : "Browser viewport is set",
   "time" : {
-    "start" : 1533838582005,
-    "stop" : 1533838582008,
-    "duration" : 3
+    "start" : 1534185660065,
+    "stop" : 1534185667925,
+    "duration" : 7860
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "57063b568a3bed73",
+  "uid" : "1cc5d2bb673369e5",
+  "name" : ".pClick()",
+  "time" : {
+    "start" : 1534185659042,
+    "stop" : 1534185659047,
+    "duration" : 5
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fee8ae16fbec1301",
+  "name" : "._getDriver()",
+  "time" : {
+    "start" : 1534185659017,
+    "stop" : 1534185659021,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "23d4a8217eef90a3",
   "name" : ".waitForInvisible()",
   "time" : {
-    "start" : 1533838582042,
-    "stop" : 1533838582045,
+    "start" : 1534185659065,
+    "stop" : 1534185659068,
     "duration" : 3
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "2184058c00804b1",
+  "uid" : "972452ae09a2bd81",
   "name" : ".setViewport()",
   "time" : {
-    "start" : 1533838582146,
-    "stop" : 1533838582156,
-    "duration" : 10
+    "start" : 1534185659161,
+    "stop" : 1534185659170,
+    "duration" : 9
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "fa88253bc05fee7d",
-  "name" : ".scrollIntoView()",
+  "uid" : "25a4fdde81301115",
+  "name" : ".launchBrowser()",
   "time" : {
-    "start" : 1533838582009,
-    "stop" : 1533838582011,
+    "start" : 1534185659148,
+    "stop" : 1534185659160,
+    "duration" : 12
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5dd1c466e46ee72f",
+  "name" : ".down()",
+  "time" : {
+    "start" : 1534185659086,
+    "stop" : 1534185659087,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f8739b62d9ae2ff",
+  "name" : ".addElements()",
+  "time" : {
+    "start" : 1534185659117,
+    "stop" : 1534185659119,
     "duration" : 2
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "69a20c3f630da9ba",
-  "name" : ".over()",
+  "uid" : "fc2a1cff638f0de8",
+  "name" : "plugin help contains option",
   "time" : {
-    "start" : 1533838582069,
-    "stop" : 1533838582072,
+    "start" : 1534185659125,
+    "stop" : 1534185659129,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "33a527f80d01e19b",
+  "name" : ".waitForExist()",
+  "time" : {
+    "start" : 1534185659054,
+    "stop" : 1534185659057,
     "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f3a2967935644457",
+  "name" : "._setChromeOpts()",
+  "time" : {
+    "start" : 1534185659170,
+    "stop" : 1534185659174,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fd15ed6a419ca240",
+  "name" : ".setText()",
+  "time" : {
+    "start" : 1534185659033,
+    "stop" : 1534185659035,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5ea86a8c2c46d642",
+  "name" : ".isVisible()",
+  "time" : {
+    "start" : 1534185659059,
+    "stop" : 1534185659062,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e3fa6169afecabd4",
+  "name" : ".click()",
+  "time" : {
+    "start" : 1534185659039,
+    "stop" : 1534185659041,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7250cc95cdfac10c",
+  "name" : ".getDriver()",
+  "time" : {
+    "start" : 1534185659114,
+    "stop" : 1534185659117,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7f916000a6747a04",
+  "name" : ".getElement()",
+  "time" : {
+    "start" : 1534185659021,
+    "stop" : 1534185659024,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5b18eff4232cb6e0",
+  "name" : ".cancel()",
+  "time" : {
+    "start" : 1534185659091,
+    "stop" : 1534185659092,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "34e89648eefdf8ed",
+  "name" : "events instance",
+  "time" : {
+    "start" : 1534185659077,
+    "stop" : 1534185659080,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "36a02e2714471ecc",
+  "name" : ".up()",
+  "time" : {
+    "start" : 1534185659087,
+    "stop" : 1534185659089,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f6215aa6fd54fe5a",
+  "name" : "element instance",
+  "time" : {
+    "start" : 1534185659007,
+    "stop" : 1534185659016,
+    "duration" : 9
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fa42e9b76e0d2e09",
+  "name" : ".out()",
+  "time" : {
+    "start" : 1534185659092,
+    "stop" : 1534185659094,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "29fefa39f1aa6eaf",
+  "name" : ".waitForNonExist()",
+  "time" : {
+    "start" : 1534185659057,
+    "stop" : 1534185659059,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "450e65d00d0ccb10",
+  "name" : "Page Object",
+  "time" : {
+    "start" : 1534185667926,
+    "stop" : 1534185677890,
+    "duration" : 9964
   },
   "status" : "passed",
   "severity" : "normal"
