@@ -1,3 +1,7 @@
+### v1.3.0
+
+- [Started](https://github.com/glacejs/glace-web/commit/33052e3afd142575b3abb787d4ed95e564bef6e3) to support slaves mechanism.
+
 ### v1.2.9
 
 - [Get](https://github.com/glacejs/glace-web/commit/6b27a8a152b28230221ba7f1251dd91ff3d2fb9e) global proxy port from proxy instance on browser start.
