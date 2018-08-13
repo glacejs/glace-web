@@ -15,7 +15,7 @@
     "test:unit": "nyc ./tests/run tests/unit",
     "test:cover": "nyc --reporter=lcov --report-dir ./docs/tests-cover ./tests/run tests/unit tests/e2e --allure",
     "test:commit": "./tests/run tests/unit",
-    "test:e2e": "./tests/run tests/e2e"
+    "test:e2e": "./tests/run tests/e2e --kill-procs webdriver"
   },
   "nyc": {
     "exclude": [
@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "glace-core": "^1.8.0",
+    "glace-core": "^1.8.1",
     "ink-docstrap": "^1.3.0",
     "jsdoc": "^3.5.5",
     "jsdoc-strip-async-await": "^0.1.0",
@@ -54,6 +54,7 @@
   ],
   "dependencies": {
     "chai": "^4.1.2",
+    "get-port": "^4.0.0",
     "glace-utils": "^1.2.9",
     "lodash": "^4.17.10",
     "logfmt": "^1.2.1",

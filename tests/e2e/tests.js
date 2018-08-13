@@ -36,7 +36,7 @@ Steps.register({
     },
 });
 
-suite("e2e web tests", null, [fxKillWebdriver, fxSelenium, fxWebdriver], () => {
+suite("e2e web tests", null, [fxSelenium, fxWebdriver], () => {
     
     before(() => {
         $.registerPages(indexPage);
