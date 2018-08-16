@@ -1,3 +1,8 @@
+### v1.3.1
+
+- Updated `glace-core`.
+- Started to use `$` only.
+
 ### v1.3.0
 
 - [Started](https://github.com/glacejs/glace-web/commit/33052e3afd142575b3abb787d4ed95e564bef6e3) to support slaves mechanism.
