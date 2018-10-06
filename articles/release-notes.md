@@ -1,3 +1,7 @@
+### v1.3.3
+
+- Use `chromedriver v2.42` explicitly.
+
 ### v1.3.2
 
 - Updated `selenium` dependencies.
