@@ -1,3 +1,7 @@
+### v1.3.2
+
+- Updated `selenium` dependencies.
+
 ### v1.3.1
 
 - Updated `glace-core`.

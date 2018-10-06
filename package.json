@@ -1,6 +1,6 @@
 {
   "name": "glace-web",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "GlaceJS Web plugin",
   "main": "lib/index.js",
   "scripts": {
@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "glace-core": "^1.8.2",
+    "glace-core": "^1.8.6",
     "ink-docstrap": "^1.3.0",
     "jsdoc": "^3.5.5",
     "jsdoc-strip-async-await": "^0.1.0",
@@ -53,13 +53,13 @@
     "lib"
   ],
   "dependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "get-port": "^4.0.0",
     "glace-utils": "^1.2.9",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.11",
     "logfmt": "^1.2.1",
-    "selenium-standalone": "^6.15.1",
+    "selenium-standalone": "^6.15.3",
     "weak": "^1.0.1",
-    "webdriverio": "^4.13.1"
+    "webdriverio": "^4.13.2"
   }
 }
