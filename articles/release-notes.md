@@ -1,3 +1,7 @@
+### v1.3.5
+
+- [Support](https://github.com/glacejs/glace-web/commit/84b3b3c96f7b2ef246fb06fce1adbe7d08a582e7) multiple browsers launching in tests.
+
 ### v1.3.4
 
 - [Improved](https://github.com/glacejs/glace-web/commit/52982520725d129dc9606aef12a226ba65cfff67) logic to install webdrivers on demand. Removed CLI option `--update-web-drivers`.
