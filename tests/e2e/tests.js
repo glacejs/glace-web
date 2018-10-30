@@ -64,7 +64,7 @@ suite("e2e web tests", null, [fxSelenium], () => {
     test("Page Object", null, [fxBrowser], () => {
 
         before(() => {
-            $.webUrl = "https://yandex.ru";
+            $.webUrl = "https://ya.ru";
             $.registerPages(indexPage);
         });
 

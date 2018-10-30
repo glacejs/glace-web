@@ -1,3 +1,7 @@
+### v1.3.6
+
+- [Fixed](https://github.com/glacejs/glace-web/commit/fd9421b0c84b463ea178cd2bf2c718d8cd5e33aa) logic to add webdriver to queue.
+
 ### v1.3.5
 
 - [Support](https://github.com/glacejs/glace-web/commit/84b3b3c96f7b2ef246fb06fce1adbe7d08a582e7) multiple browsers launching in tests.
