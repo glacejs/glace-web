@@ -6,17 +6,17 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 41,
+      "passed" : 39,
       "unknown" : 0,
-      "total" : 41
+      "total" : 39
     },
     "time" : {
-      "start" : 1540919032500,
-      "stop" : 1540919082140,
-      "duration" : 49640,
+      "start" : 1540920418636,
+      "stop" : 1540920467878,
+      "duration" : 49242,
       "minDuration" : 1,
-      "maxDuration" : 38964,
-      "sumDuration" : 48525
+      "maxDuration" : 40354,
+      "sumDuration" : 48371
     }
   },
   "environment" : [ ],
@@ -62,9 +62,9 @@
         "failed" : 0,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 5,
+        "passed" : 3,
         "unknown" : 0,
-        "total" : 5
+        "total" : 3
       }
     }, {
       "uid" : "9e2c394cf97215f1ebf1773bd5c63fa7",
@@ -117,13 +117,13 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 41,
+      "passed" : 39,
       "unknown" : 0,
-      "total" : 41
+      "total" : 39
     }
   } ],
   "behaviors" : {
-    "total" : 41,
+    "total" : 39,
     "items" : [ ]
   },
   "executors" : [ ],

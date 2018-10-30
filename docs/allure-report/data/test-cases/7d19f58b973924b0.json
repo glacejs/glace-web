@@ -1,0 +1,77 @@
+{
+  "uid" : "7d19f58b973924b0",
+  "name" : ".click()",
+  "fullName" : "UI element..click()",
+  "historyId" : "9dcb319c27cb5463bafd503253f544fa",
+  "time" : {
+    "start" : 1540920418689,
+    "stop" : 1540920418692,
+    "duration" : 3
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "clicks",
+      "time" : {
+        "start" : 1540920418690,
+        "stop" : 1540920418691,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "UI element"
+  }, {
+    "name" : "testClass",
+    "value" : "UI element"
+  }, {
+    "name" : "testMethod",
+    "value" : ".click()"
+  }, {
+    "name" : "package",
+    "value" : "UI element"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7d19f58b973924b0.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ ]
+}

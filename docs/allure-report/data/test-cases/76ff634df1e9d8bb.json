@@ -1,0 +1,77 @@
+{
+  "uid" : "76ff634df1e9d8bb",
+  "name" : "._getDriver()",
+  "fullName" : "UI element.._getDriver()",
+  "historyId" : "e723f1fb99c82cf1452d5c13a50c4399",
+  "time" : {
+    "start" : 1540920418666,
+    "stop" : 1540920418669,
+    "duration" : 3
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "gets webdriver",
+      "time" : {
+        "start" : 1540920418667,
+        "stop" : 1540920418669,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "UI element"
+  }, {
+    "name" : "testClass",
+    "value" : "UI element"
+  }, {
+    "name" : "testMethod",
+    "value" : "._getDriver()"
+  }, {
+    "name" : "package",
+    "value" : "UI element"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "76ff634df1e9d8bb.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ ]
+}
