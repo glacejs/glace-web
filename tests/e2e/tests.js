@@ -36,14 +36,10 @@ Steps.register({
     },
 });
 
-suite("e2e web tests", null, [fxSelenium, fxWebdriver], () => {
-    
-    before(() => {
-        $.registerPages(indexPage);
-    });
+suite("e2e web tests", null, [fxSelenium], () => {
 
     test("Browser viewport is set", () => {
-    
+
         beforeChunk(() => {
             CONF.web.width = null;
             CONF.web.height = null;
@@ -52,7 +48,7 @@ suite("e2e web tests", null, [fxSelenium, fxWebdriver], () => {
         afterChunk(async () => {
             await $.closeBrowser();
         });
-    
+
         chunk("explicitly", async () => {
             await $.launchBrowser();
             await $.setViewport({ width: 700, height: 500 });
@@ -69,6 +65,7 @@ suite("e2e web tests", null, [fxSelenium, fxWebdriver], () => {
 
         before(() => {
             $.webUrl = "https://yandex.ru";
+            $.registerPages(indexPage);
         });
 
         chunk("manages UI elements via Glace POM", async () => {

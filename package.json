@@ -59,6 +59,7 @@
     "lodash": "^4.17.11",
     "logfmt": "^1.2.1",
     "selenium-standalone": "^6.15.3",
+    "uuid": "^3.3.2",
     "weak": "^1.0.1",
     "webdriverio": "^4.14.0"
   }
