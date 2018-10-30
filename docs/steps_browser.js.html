@@ -274,7 +274,7 @@ var BrowserSteps = {
         allure.step("Get launched browsers");
         LOG.info("Getting launched browsers...");
 
-        const launchedBrowsers = this._webdrivers ? this._webdrivers.all() : {};
+        const launchedBrowsers = this._webdrivers().all();
         if (opts.check) {
             expect(launchedBrowsers, "No one browser is launched").to.not.be.empty;
         }
@@ -308,7 +308,7 @@ var BrowserSteps = {
 
         let currBrowser = null;
         if (this.webdriver) {
-            currBrowser = { [this._webdrivers.getKey(this.webdriver)]: this.webdriver };
+            currBrowser = { [this._webdrivers().getKey(this.webdriver)]: this.webdriver };
         }
         if (opts.check) {
             expect(currBrowser, "No one browser is launched").to.exist;
@@ -344,23 +344,21 @@ var BrowserSteps = {
          * await $.launchBrowser({ chromeOpts: ["headless", "user-data-dir=/path/to/dir"] });
          */
 
-        this._webdrivers = U.defVal(this._webdrivers, new utils.OrderedCollection());
-
         opts = U.defVal(opts, {});
         const check = U.defVal(opts.check, true);
         opts.tryExisting = U.defVal(opts.tryExisting, false);
         this.webUrl = U.defVal(this.webUrl, CONF.web.url);
 
+        let name;
         if (!opts.tryExisting || !this.webdriver) {
             const webdriverConf = U.defVal(opts.webdriver, CONF.webdriver);
 
-            const name = U.defVal(
+            name = U.defVal(
                 opts.name, `${webdriverConf.desiredCapabilities.browserName}-${uuid()}`);
-            expect(this._webdrivers.get(name),
+            expect(this._webdrivers().get(name),
                 `Browser name "${name}" is used already. Choose another.`).to.not.exist;
 
             this.webdriver = this.__wdio.remote(webdriverConf);
-            this._webdrivers.push(this.webdriver, name);
         }
 
         allure.step("Launch browser via selenium");
@@ -386,6 +384,8 @@ var BrowserSteps = {
         };
 
         allure.pass();
+
+        if (name) this._webdrivers().push(this.webdriver, name);
         return true;
     },
 
@@ -506,7 +506,7 @@ var BrowserSteps = {
          * @throws {AssertionError} If browser wasn't closed.
          */
 
-        if (!this._webdrivers.top()) {
+        if (!this._webdrivers().top()) {
             LOG.debug("No one browser is launched yet");
             return false;
         };
@@ -515,25 +515,27 @@ var BrowserSteps = {
         opts.switchPrev = U.defVal(opts.switchPrev, true);
         opts.check = U.defVal(opts.check, true);
 
+        const webdriver = this.webdriver;
+
+        if (opts.switchPrev) {
+            expect(this._webdrivers().pop(),
+                "Browsers collection is misordered.").to.be.equal(this.webdriver);
+            this.webdriver = this._webdrivers().top();
+        }
+
         allure.step("Close browser");
         LOG.info("Closing browser...");
 
-        await this.webdriver.end();
+        await webdriver.end();
         await this.pause(1, "webdriver process will be stopped");
 
         if (opts.check) {
-            expect(await this.webdriver.session(),
+            expect(await webdriver.session(),
                 "Browser wasn't closed").to.not.exist;
         };
 
         LOG.info("Browser is closed");
         allure.pass();
-
-        if (opts.switchPrev) {
-            expect(this._webdrivers.pop(),
-                "Browsers collection is misordered.").to.be.equal(this.webdriver);
-            this.webdriver = this._webdrivers.top();
-        }
         return true;
     },
 
@@ -572,14 +574,34 @@ var BrowserSteps = {
         allure.step(`Switch browser to "${name}"`);
         LOG.info(`Switching browser to "${name}"...`);
 
-        const webdriver = this._webdrivers.pop(name);
-        this._webdrivers.push(webdriver);
+        const webdriver = this._webdrivers().pop(name);
+        this._webdrivers().push(webdriver);
         this.webdriver = webdriver;
 
         LOG.info("Browser is switched");
         allure.pass();
 
         return this.webdriver;
+    },
+
+    closeAllBrowsers: async function (opts={}) {
+        /**
+         * Step to close all browsers.
+         *
+         * @async
+         * @memberOf BrowserSteps
+         * @method closeAllBrowsers
+         * @instance
+         * @arg {object} [opts] - Step options.
+         * @arg {boolean} [opts.check=true] - Flag to check that browser was closed.
+         * @return {Promise&lt;void>}
+         */
+
+        opts.switchPrev = true;
+        let exitStatus = true;
+        while (exitStatus) {
+            exitStatus = await this.closeBrowser(opts);
+        }
     },
 
     openUrl: async function (webUrl, opts) {
@@ -642,6 +664,13 @@ var BrowserSteps = {
             "Web URL isn't defined").to.exist;
         await this.openUrl(this.webUrl, opts);
         allure.pass();
+    },
+
+    _webdrivers: function () {
+        if (!this.__webdrivers) {
+            this.__webdrivers = new utils.OrderedCollection();
+        }
+        return this.__webdrivers;
     },
 
     /**
@@ -743,7 +772,7 @@ var isOptPresent = (opt, opts) => {
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2018-10-30T19:26:55+02:00
+		on 2018-10-30T22:12:34+02:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
