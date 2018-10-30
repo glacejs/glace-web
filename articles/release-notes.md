@@ -1,3 +1,7 @@
+### v1.3.4
+
+- [Improved](https://github.com/glacejs/glace-web/commit/52982520725d129dc9606aef12a226ba65cfff67) logic to install webdrivers on demand. Removed CLI option `--update-web-drivers`.
+
 ### v1.3.3
 
 - Use `chromedriver v2.42` explicitly.
