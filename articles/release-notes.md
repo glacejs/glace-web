@@ -1,3 +1,9 @@
+### v1.3.7
+
+- [Skip](https://github.com/glacejs/glace-web/commit/79fdbd753933557daab7fc1b8354c0ee8565c32c) browser launch if it is already.
+- [Wrap](https://github.com/glacejs/glace-web/commit/45ee76a3ca880088182f1f24a755c09e405c4db6) url to double quotes in log message.
+- [Log](https://github.com/glacejs/glace-web/commit/671f3b66fe27ccf8ba93365e8cb691760391524c) browser name in steps to launch and close browser.
+
 ### v1.3.6
 
 - [Fixed](https://github.com/glacejs/glace-web/commit/fd9421b0c84b463ea178cd2bf2c718d8cd5e33aa) logic to add webdriver to queue.
