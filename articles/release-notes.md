@@ -1,3 +1,7 @@
+### v1.3.8
+
+- [Updated](https://github.com/glacejs/glace-web/commit/2d76d596accbc2d6b99a6475f99a74de4b37d675) log message format.
+
 ### v1.3.7
 
 - [Skip](https://github.com/glacejs/glace-web/commit/79fdbd753933557daab7fc1b8354c0ee8565c32c) browser launch if it is already.
