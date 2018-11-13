@@ -1,390 +1,390 @@
 [ {
-  "uid" : "afb4a67e9ef57621",
-  "name" : ".waitForVisible()",
-  "time" : {
-    "start" : 1541103423337,
-    "stop" : 1541103423341,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "e53b73633cd0e13",
-  "name" : ".waitForExist()",
-  "time" : {
-    "start" : 1541103423323,
-    "stop" : 1541103423327,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7304da59d4ed1c94",
-  "name" : "element instance",
-  "time" : {
-    "start" : 1541103423243,
-    "stop" : 1541103423258,
-    "duration" : 15
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fd0503208e49db14",
-  "name" : "plugin help contains option",
-  "time" : {
-    "start" : 1541103423431,
-    "stop" : 1541103423437,
-    "duration" : 6
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7071bd8b1de97079",
-  "name" : "config",
-  "time" : {
-    "start" : 1541103423223,
-    "stop" : 1541103423230,
-    "duration" : 7
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "87f19b51294f5ee5",
-  "name" : ".getDriver()",
-  "time" : {
-    "start" : 1541103423416,
-    "stop" : 1541103423419,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d356ec9ef6ebc932",
-  "name" : ".over()",
-  "time" : {
-    "start" : 1541103423369,
-    "stop" : 1541103423373,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8a2f4cf50b44bc07",
-  "name" : "page instance",
-  "time" : {
-    "start" : 1541103423407,
-    "stop" : 1541103423414,
-    "duration" : 7
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8fd3ed1c616c17b1",
-  "name" : ".isExist()",
-  "time" : {
-    "start" : 1541103423318,
-    "stop" : 1541103423322,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5c218536e7badbb5",
-  "name" : ".setDriver()",
-  "time" : {
-    "start" : 1541103423414,
-    "stop" : 1541103423416,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "9cfc0cd44b952113",
-  "name" : ".isSelected()",
-  "time" : {
-    "start" : 1541103423312,
-    "stop" : 1541103423318,
-    "duration" : 6
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "99a410f641b7c37f",
-  "name" : "Browser viewport is set",
-  "time" : {
-    "start" : 1541103424491,
-    "stop" : 1541103431745,
-    "duration" : 7254
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "9fe9225ca7a37fcd",
-  "name" : "events instance",
-  "time" : {
-    "start" : 1541103423362,
-    "stop" : 1541103423366,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c565b83bf7649ddd",
-  "name" : ".down()",
-  "time" : {
-    "start" : 1541103423377,
-    "stop" : 1541103423381,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "e2adac90bc10d1ea",
-  "name" : ".pClick()",
-  "time" : {
-    "start" : 1541103423302,
-    "stop" : 1541103423311,
-    "duration" : 9
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "294f8a57aff5eee0",
-  "name" : ".leave()",
-  "time" : {
-    "start" : 1541103423394,
-    "stop" : 1541103423397,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "220ab1dee8b30c02",
-  "name" : ".addElements()",
-  "time" : {
-    "start" : 1541103423420,
-    "stop" : 1541103423422,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "679a5a9048e12225",
-  "name" : ".setViewport()",
-  "time" : {
-    "start" : 1541103423443,
-    "stop" : 1541103423465,
-    "duration" : 22
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "27e3b5eb6900a828",
-  "name" : ".up()",
-  "time" : {
-    "start" : 1541103423381,
-    "stop" : 1541103423384,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "1981577a34a7790e",
-  "name" : ".scrollIntoView()",
-  "time" : {
-    "start" : 1541103423292,
-    "stop" : 1541103423295,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "25e7e3c34c6d4b96",
-  "name" : "Plugin lazy import",
-  "time" : {
-    "start" : 1541103423403,
-    "stop" : 1541103423405,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "246cda85dc8f7588",
-  "name" : ".out()",
-  "time" : {
-    "start" : 1541103423391,
-    "stop" : 1541103423393,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "aab45127e6e38c63",
-  "name" : ".click()",
-  "time" : {
-    "start" : 1541103423296,
-    "stop" : 1541103423300,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "cf2a5bc6f5dc004e",
-  "name" : ".removeElements()",
-  "time" : {
-    "start" : 1541103423422,
-    "stop" : 1541103423424,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8c10c3488e671337",
-  "name" : ".enter()",
-  "time" : {
-    "start" : 1541103423374,
-    "stop" : 1541103423377,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4e6efb9ff0241985",
-  "name" : ".getText()",
-  "time" : {
-    "start" : 1541103423265,
-    "stop" : 1541103423282,
-    "duration" : 17
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a007dc8fae710ad8",
-  "name" : ".waitForNonExist()",
-  "time" : {
-    "start" : 1541103423328,
-    "stop" : 1541103423331,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "399493fbabf82b7a",
-  "name" : ".move()",
-  "time" : {
-    "start" : 1541103423385,
-    "stop" : 1541103423387,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "e14a67b238572a8a",
-  "name" : "._getDriver()",
-  "time" : {
-    "start" : 1541103423258,
-    "stop" : 1541103423262,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "65154bfdd17a00e",
-  "name" : "._pages()",
-  "time" : {
-    "start" : 1541103423473,
-    "stop" : 1541103423476,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "82e7a36dc70cb6f4",
-  "name" : ".isVisible()",
-  "time" : {
-    "start" : 1541103423332,
-    "stop" : 1541103423336,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4fecbf1c44d59dd9",
-  "name" : ".getElement()",
-  "time" : {
-    "start" : 1541103423262,
-    "stop" : 1541103423265,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d8f625336725e5aa",
-  "name" : "events._getDriver()",
-  "time" : {
-    "start" : 1541103423367,
-    "stop" : 1541103423369,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "59175d9c4feda649",
+  "uid" : "4e51e9360ee64e8",
   "name" : ".cancel()",
   "time" : {
-    "start" : 1541103423388,
-    "stop" : 1541103423391,
+    "start" : 1542138819641,
+    "stop" : 1542138819643,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1d9ba9f04c73c4e2",
+  "name" : ".isExist()",
+  "time" : {
+    "start" : 1542138819584,
+    "stop" : 1542138819587,
     "duration" : 3
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "2fd393473bbdcab4",
-  "name" : "._setChromeOpts()",
+  "uid" : "15e072479c41d9c7",
+  "name" : ".leave()",
   "time" : {
-    "start" : 1541103423465,
-    "stop" : 1541103423472,
-    "duration" : 7
+    "start" : 1542138819646,
+    "stop" : 1542138819647,
+    "duration" : 1
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "d1b99c3213b02446",
-  "name" : ".setText()",
-  "time" : {
-    "start" : 1541103423283,
-    "stop" : 1541103423287,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d7a1a6998ad1d28b",
-  "name" : ".waitForInvisible()",
-  "time" : {
-    "start" : 1541103423342,
-    "stop" : 1541103423346,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f2b15ea7fa618a1b",
-  "name" : ".location()",
-  "time" : {
-    "start" : 1541103423287,
-    "stop" : 1541103423291,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "99a12a678c84cab",
+  "uid" : "6b484eeaa4e55f01",
   "name" : "Page Object",
   "time" : {
-    "start" : 1541103431746,
-    "stop" : 1541103439298,
-    "duration" : 7552
+    "start" : 1542138836349,
+    "stop" : 1542138844835,
+    "duration" : 8486
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6b88277f87af81f2",
+  "name" : ".up()",
+  "time" : {
+    "start" : 1542138819636,
+    "stop" : 1542138819639,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "88b76f2d798b957a",
+  "name" : ".setDriver()",
+  "time" : {
+    "start" : 1542138819664,
+    "stop" : 1542138819665,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "130fa2d7890326e7",
+  "name" : "events._getDriver()",
+  "time" : {
+    "start" : 1542138819625,
+    "stop" : 1542138819627,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fbc16f2ded3e1173",
+  "name" : "page instance",
+  "time" : {
+    "start" : 1542138819657,
+    "stop" : 1542138819663,
+    "duration" : 6
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1c80e29a6fb3a21a",
+  "name" : "._pages()",
+  "time" : {
+    "start" : 1542138819717,
+    "stop" : 1542138819721,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5f283be4168d1f84",
+  "name" : "._getDriver()",
+  "time" : {
+    "start" : 1542138819529,
+    "stop" : 1542138819533,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8075713e01f4f42",
+  "name" : ".isSelected()",
+  "time" : {
+    "start" : 1542138819578,
+    "stop" : 1542138819583,
+    "duration" : 5
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d5098d7f6302aa58",
+  "name" : "._setChromeOpts()",
+  "time" : {
+    "start" : 1542138819709,
+    "stop" : 1542138819717,
+    "duration" : 8
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bea498d11203c459",
+  "name" : ".move()",
+  "time" : {
+    "start" : 1542138819639,
+    "stop" : 1542138819641,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f0239edd5bbc13bd",
+  "name" : ".waitForNonExist()",
+  "time" : {
+    "start" : 1542138819592,
+    "stop" : 1542138819596,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "36f659001a24fbe3",
+  "name" : "element instance",
+  "time" : {
+    "start" : 1542138819515,
+    "stop" : 1542138819528,
+    "duration" : 13
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "20acf930414137f9",
+  "name" : ".removeElements()",
+  "time" : {
+    "start" : 1542138819671,
+    "stop" : 1542138819673,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9bfd89cb6fa441",
+  "name" : ".down()",
+  "time" : {
+    "start" : 1542138819633,
+    "stop" : 1542138819636,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a05ae96ed6dcba89",
+  "name" : ".enter()",
+  "time" : {
+    "start" : 1542138819630,
+    "stop" : 1542138819633,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6dedd6eff1714838",
+  "name" : ".getDriver()",
+  "time" : {
+    "start" : 1542138819666,
+    "stop" : 1542138819668,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8066a5e21929ad89",
+  "name" : ".addElements()",
+  "time" : {
+    "start" : 1542138819669,
+    "stop" : 1542138819671,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fb3cd168084c08a6",
+  "name" : ".location()",
+  "time" : {
+    "start" : 1542138819555,
+    "stop" : 1542138819557,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9b9cce1cb66051ce",
+  "name" : ".out()",
+  "time" : {
+    "start" : 1542138819644,
+    "stop" : 1542138819645,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f9d19679ad36030f",
+  "name" : ".scrollIntoView()",
+  "time" : {
+    "start" : 1542138819558,
+    "stop" : 1542138819561,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9a11adebecf36977",
+  "name" : "config",
+  "time" : {
+    "start" : 1542138819495,
+    "stop" : 1542138819501,
+    "duration" : 6
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "52297fcaf427e00b",
+  "name" : ".setViewport()",
+  "time" : {
+    "start" : 1542138819685,
+    "stop" : 1542138819709,
+    "duration" : 24
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ae9f67492e302b77",
+  "name" : "events instance",
+  "time" : {
+    "start" : 1542138819621,
+    "stop" : 1542138819625,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1ae2c174386ef35b",
+  "name" : ".getText()",
+  "time" : {
+    "start" : 1542138819536,
+    "stop" : 1542138819550,
+    "duration" : 14
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "76a248d51f7cdea8",
+  "name" : ".click()",
+  "time" : {
+    "start" : 1542138819562,
+    "stop" : 1542138819566,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4531e8df7cf4a985",
+  "name" : ".getElement()",
+  "time" : {
+    "start" : 1542138819533,
+    "stop" : 1542138819536,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a13c849e77b1c6fd",
+  "name" : ".waitForInvisible()",
+  "time" : {
+    "start" : 1542138819604,
+    "stop" : 1542138819607,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1cc8b324601197fa",
+  "name" : "plugin help contains option",
+  "time" : {
+    "start" : 1542138819677,
+    "stop" : 1542138819681,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d74cbc5c09019098",
+  "name" : "Plugin lazy import",
+  "time" : {
+    "start" : 1542138819653,
+    "stop" : 1542138819655,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "908fe5d589cec82b",
+  "name" : ".isVisible()",
+  "time" : {
+    "start" : 1542138819597,
+    "stop" : 1542138819600,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7493492ec977aa79",
+  "name" : ".waitForExist()",
+  "time" : {
+    "start" : 1542138819588,
+    "stop" : 1542138819592,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a7ba87d37a84bc3d",
+  "name" : ".pClick()",
+  "time" : {
+    "start" : 1542138819567,
+    "stop" : 1542138819578,
+    "duration" : 11
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2b510834163382d5",
+  "name" : ".setText()",
+  "time" : {
+    "start" : 1542138819551,
+    "stop" : 1542138819554,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6d0c5f333a295f59",
+  "name" : "Browser viewport is set",
+  "time" : {
+    "start" : 1542138823285,
+    "stop" : 1542138836348,
+    "duration" : 13063
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "149fb083c3dca247",
+  "name" : ".over()",
+  "time" : {
+    "start" : 1542138819627,
+    "stop" : 1542138819630,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dbc0b97314b85d1",
+  "name" : ".waitForVisible()",
+  "time" : {
+    "start" : 1542138819600,
+    "stop" : 1542138819603,
+    "duration" : 3
   },
   "status" : "passed",
   "severity" : "normal"

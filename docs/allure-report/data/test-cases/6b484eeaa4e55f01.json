@@ -1,0 +1,257 @@
+{
+  "uid" : "6b484eeaa4e55f01",
+  "name" : "Page Object",
+  "fullName" : "e2e web tests.Page Object",
+  "historyId" : "9e708c3eaf86bdb182767c926e7428b2",
+  "time" : {
+    "start" : 1542138836349,
+    "stop" : 1542138844835,
+    "duration" : 8486
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Launch browser \"chrome-cfbe2c74-f9e3-41b2-a9ee-efd5baff79c5\" via selenium",
+      "time" : {
+        "start" : 1542138836356,
+        "stop" : 1542138838154,
+        "duration" : 1798
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Set browser viewport to [width=800, height=600]",
+        "time" : {
+          "start" : 1542138837747,
+          "stop" : 1542138838154,
+          "duration" : 407
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Register web page index",
+      "time" : {
+        "start" : 1542138838155,
+        "stop" : 1542138838155,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "manages UI elements via Glace POM",
+      "time" : {
+        "start" : 1542138838155,
+        "stop" : 1542138841258,
+        "duration" : 3103
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Open web page index",
+        "time" : {
+          "start" : 1542138838155,
+          "stop" : 1542138840017,
+          "duration" : 1862
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Open URL \"https://ya.ru/\" in browser",
+          "time" : {
+            "start" : 1542138838157,
+            "stop" : 1542138840017,
+            "duration" : 1860
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Sleep 1 sec because wait for result",
+        "time" : {
+          "start" : 1542138840257,
+          "stop" : 1542138841258,
+          "duration" : 1001
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "manages UI elements via WebdriverIO",
+      "time" : {
+        "start" : 1542138841258,
+        "stop" : 1542138843712,
+        "duration" : 2454
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Open web page index",
+        "time" : {
+          "start" : 1542138841258,
+          "stop" : 1542138842457,
+          "duration" : 1199
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Open URL \"https://ya.ru/\" in browser",
+          "time" : {
+            "start" : 1542138841259,
+            "stop" : 1542138842457,
+            "duration" : 1198
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Sleep 1 sec because wait for result",
+        "time" : {
+          "start" : 1542138842710,
+          "stop" : 1542138843711,
+          "duration" : 1001
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Close browser \"chrome-cfbe2c74-f9e3-41b2-a9ee-efd5baff79c5\"",
+      "time" : {
+        "start" : 1542138843713,
+        "stop" : 1542138844835,
+        "duration" : 1122
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Sleep 1 sec because webdriver process will be stopped",
+        "time" : {
+          "start" : 1542138843834,
+          "stop" : 1542138844834,
+          "duration" : 1000
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 13,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "e2e web tests"
+  }, {
+    "name" : "testClass",
+    "value" : "e2e web tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "Page Object"
+  }, {
+    "name" : "package",
+    "value" : "e2e web tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6b484eeaa4e55f01.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ ]
+}
