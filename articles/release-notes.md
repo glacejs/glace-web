@@ -1,3 +1,7 @@
+### v1.3.9
+
+- [Used](https://github.com/glacejs/glace-web/commit/1d0c8b40b794c549d9d11ba1ea984b40dd84d3f9) fixtures factory.
+
 ### v1.3.8
 
 - [Updated](https://github.com/glacejs/glace-web/commit/2d76d596accbc2d6b99a6475f99a74de4b37d675) log message format.
