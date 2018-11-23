@@ -1,0 +1,77 @@
+{
+  "uid" : "ce6f9c4dec81b2fd",
+  "name" : ".move()",
+  "fullName" : "Pointer Events..move()",
+  "historyId" : "8fab00b3dbab6acdb607ee99f5975647",
+  "time" : {
+    "start" : 1542955017686,
+    "stop" : 1542955017688,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : false
+  },
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "to selector coords",
+      "time" : {
+        "start" : 1542955017687,
+        "stop" : 1542955017688,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pointer Events"
+  }, {
+    "name" : "testClass",
+    "value" : "Pointer Events"
+  }, {
+    "name" : "testMethod",
+    "value" : ".move()"
+  }, {
+    "name" : "package",
+    "value" : "Pointer Events"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ce6f9c4dec81b2fd.json",
+  "statusDetailsSafe" : {
+    "flaky" : false
+  },
+  "statusMessage" : {
+    "present" : false
+  },
+  "parameterValues" : [ ]
+}
