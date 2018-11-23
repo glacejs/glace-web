@@ -36,7 +36,7 @@ Steps.register({
     },
 });
 
-suite("e2e web tests", null, [fxSelenium], () => {
+suite("e2e web tests", [fxSeleniumServer], () => {
 
     test("Browser viewport is set", () => {
 
@@ -61,7 +61,7 @@ suite("e2e web tests", null, [fxSelenium], () => {
         });
     });
 
-    test("Page Object", null, [fxBrowser], () => {
+    test("Page Object", [fxBrowser], () => {
 
         before(() => {
             $.webUrl = "https://ya.ru";
