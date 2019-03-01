@@ -41,12 +41,12 @@
     "npm": ">=5.5"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
-    "glace-core": "^1.9.3",
+    "eslint": "^5.14.1",
+    "glace-core": "^1.9.8",
     "ink-docstrap": "^1.3.0",
     "jsdoc": "^3.5.5",
     "jsdoc-strip-async-await": "^0.1.0",
-    "nyc": "^13.1.0",
+    "nyc": "^13.3.0",
     "pre-commit": "^1.2.2"
   },
   "files": [
@@ -54,13 +54,13 @@
   ],
   "dependencies": {
     "chai": "4.2.0",
-    "get-port": "4.0.0",
-    "glace-utils": "1.3.2",
+    "get-port": "4.1.0",
+    "glace-utils": "1.3.4",
     "lodash": "4.17.11",
     "logfmt": "1.2.1",
-    "selenium-standalone": "6.15.4",
+    "selenium-standalone": "6.15.6",
     "uuid": "3.3.2",
     "weak": "1.0.1",
-    "webdriverio": "4.14.0"
+    "webdriverio": "4.14.2"
   }
 }
