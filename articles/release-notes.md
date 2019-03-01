@@ -1,3 +1,7 @@
+### v1.4.0
+
+- Updated dependencies to fresh versions.
+
 ### v1.3.9
 
 - [Used](https://github.com/glacejs/glace-web/commit/1d0c8b40b794c549d9d11ba1ea984b40dd84d3f9) fixtures factory.
