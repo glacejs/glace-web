@@ -1,5 +1,5 @@
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/config.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/config.js
 FNF:0
 FNH:0
 DA:14,1
@@ -97,7 +97,7 @@ BRF:32
 BRH:9
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/index.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/index.js
 FN:15,(anonymous_0)
 FN:24,(anonymous_1)
 FN:33,(anonymous_2)
@@ -131,7 +131,7 @@ BRF:8
 BRH:8
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/pluginHelp.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/pluginHelp.js
 FN:7,(anonymous_0)
 FNF:1
 FNH:1
@@ -144,7 +144,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/utils.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/utils.js
 FN:8,(anonymous_0)
 FN:10,(anonymous_1)
 FN:13,(anonymous_2)
@@ -257,7 +257,7 @@ BRF:30
 BRH:16
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/fixtures/browser.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/fixtures/browser.js
 FN:5,(anonymous_0)
 FN:5,(anonymous_1)
 FN:9,(anonymous_2)
@@ -283,7 +283,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/fixtures/index.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/fixtures/index.js
 FNF:0
 FNH:0
 DA:9,1
@@ -295,7 +295,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/fixtures/killWebdriver.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/fixtures/killWebdriver.js
 FN:9,(anonymous_0)
 FN:9,(anonymous_1)
 FNF:2
@@ -314,7 +314,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/fixtures/seleniumServer.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/fixtures/seleniumServer.js
 FN:7,(anonymous_0)
 FN:7,(anonymous_1)
 FN:13,(anonymous_2)
@@ -345,7 +345,7 @@ BRF:4
 BRH:2
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/pom/element.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/pom/element.js
 FN:22,(anonymous_0)
 FN:39,(anonymous_1)
 FN:52,(anonymous_2)
@@ -563,7 +563,7 @@ BRF:33
 BRH:20
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/pom/event.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/pom/event.js
 FN:16,(anonymous_0)
 FN:28,(anonymous_1)
 FN:43,(anonymous_2)
@@ -630,7 +630,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/pom/index.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/pom/index.js
 FN:16,(anonymous_0)
 FN:31,(anonymous_1)
 FN:41,(anonymous_2)
@@ -697,7 +697,7 @@ BRF:12
 BRH:12
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/steps/browser.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/steps/browser.js
 FN:31,(anonymous_0)
 FN:57,(anonymous_1)
 FN:59,(anonymous_2)
@@ -963,8 +963,8 @@ DA:597,1
 DA:598,1
 DA:600,1
 DA:601,1
-DA:602,4
-DA:604,4
+DA:602,2
+DA:604,2
 DA:606,1
 DA:607,1
 DA:611,1
@@ -1044,8 +1044,8 @@ BRDA:584,33,1,1
 BRDA:595,34,0,0
 BRDA:595,34,1,1
 BRDA:604,35,0,1
-BRDA:604,35,1,3
-BRDA:604,36,0,4
+BRDA:604,35,1,1
+BRDA:604,36,0,2
 BRDA:604,36,1,1
 BRDA:626,37,0,0
 BRDA:626,37,1,45
@@ -1053,7 +1053,7 @@ BRF:73
 BRH:39
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/steps/index.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/steps/index.js
 FNF:0
 FNH:0
 DA:12,2
@@ -1067,7 +1067,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/user/vega/projects/glace/glace-web/lib/steps/page.js
+SF:/Users/sergeichip/user/projects/glace/glace-web/lib/steps/page.js
 FN:16,(anonymous_0)
 FN:42,(anonymous_1)
 FN:68,(anonymous_2)
